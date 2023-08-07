@@ -33,6 +33,7 @@ const Wrap = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
 `;
 
 export default Layout;
