@@ -1,10 +1,11 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import {Link} from "gatsby";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/Layout";
 
-const UsingSSR = ({ serverData }) => {
+import Seo from "../components/Seo";
+
+const UsingSSR = ({serverData}: any) => {
   return (
     <Layout>
       <h1>
@@ -16,7 +17,7 @@ const UsingSSR = ({ serverData }) => {
         <code>dog.ceo/api/breed/shiba/images/random</code>:
       </p>
       <img
-        style={{ width: "320px", borderRadius: "var(--border-radius)" }}
+        style={{width: "320px", borderRadius: "var(--border-radius)"}}
         alt="A random dog"
         src={serverData.message}
       />
@@ -29,27 +30,29 @@ const UsingSSR = ({ serverData }) => {
       </p>
       <Link to="/">Go back to the homepage</Link>
     </Layout>
-  )
-}
+  );
+};
 
-export const Head = () => <Seo title="Using SSR" />
+export const Head = () => (
+  <Seo title="Using SSR" description={""} children={undefined} />
+);
 
-export default UsingSSR
+export default UsingSSR;
 
 export async function getServerData() {
   try {
-    const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`)
+    const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`);
     if (!res.ok) {
-      throw new Error(`Response failed`)
+      throw new Error(`Response failed`);
     }
     return {
       props: await res.json(),
-    }
+    };
   } catch (error) {
     return {
       status: 500,
       headers: {},
       props: {},
-    }
+    };
   }
 }

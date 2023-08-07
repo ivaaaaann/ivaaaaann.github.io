@@ -7,12 +7,12 @@
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
+exports.createPages = async ({actions}) => {
+  const {createPage} = actions;
   createPage({
     path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
+    component: require.resolve("./src/templates/using-dsg.tsx"),
     context: {},
     defer: true,
-  })
-}
+  });
+};
