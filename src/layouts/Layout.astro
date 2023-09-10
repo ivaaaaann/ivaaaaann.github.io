@@ -1,0 +1,29 @@
+---
+import MetaTags from '../components/MetaTags.astro';
+import { SITE_DESCRIPTION } from '../constants';
+import Footer from './Footer';
+import Header from './Header';
+import '../styles/global.css';
+
+export interface Props {
+  url?: string;
+  title?: string;
+  pageTitle?: string;
+  description?: string;
+}
+
+const { title = '', pageTitle, url = '/', description = SITE_DESCRIPTION } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <MetaTags url={url} title={title} description={description} />
+    <title>{pageTitle !== undefined ? pageTitle : title} | 임동현</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
