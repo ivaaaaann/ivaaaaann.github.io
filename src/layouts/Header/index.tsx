@@ -1,7 +1,12 @@
 import React from 'react';
+import { containerStyle } from './header.css';
 
 const Header = () => {
-  return <header><nav>header</nav></header>;
+  return (
+    <header className={containerStyle}>
+      <nav>header</nav>
+    </header>
+  );
 };
 
 export default Header;
