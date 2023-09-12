@@ -3,7 +3,10 @@ import { color } from './token';
 
 export const vars = createGlobalThemeContract(
   {
-    color: Object.keys(color).reduce((acc, cur) => ({ ...acc, [cur]: null }), {}),
+    color: Object.keys(color).reduce(
+      (acc, cur) => ({ ...acc, [cur]: null }),
+      {} as Record<keyof typeof color, null>,
+    ),
     fontWeight: {
       base: null,
       heading: null,
