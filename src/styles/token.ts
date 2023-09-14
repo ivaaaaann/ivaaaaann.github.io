@@ -2,7 +2,7 @@ export type media = 'mobile' | 'desktop';
 
 export const breakPoints: Record<media, string> = {
   mobile: '608px',
-  desktop: '1024px',
+  desktop: '900px',
 };
 
 export const color = {

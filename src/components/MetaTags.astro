@@ -3,11 +3,11 @@ import { SITE_URL, SITE_HOST, SITE_TITLE } from '../constants';
 
 export interface Props {
   url: string;
-  title: string;
+  pageTitle: string;
   description: string;
 }
 
-const { title, url, description } = Astro.props;
+const { pageTitle, url, description } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -16,11 +16,11 @@ const isBlogPost = url.startsWith('/blog/');
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="title" content={title} />
+<meta name="title" content={pageTitle} />
 <meta name="description" content={description} />
 <meta name="generator" content={Astro.generator} />
 <meta property="og:type" content={isBlogPost ? 'article' : 'website'} />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={pageTitle} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:site_name" content={SITE_TITLE} />
 <meta property="og:description" content={description} />
@@ -31,6 +31,6 @@ const isBlogPost = url.startsWith('/blog/');
 <link rel="preload" href="/fonts/Pretendard-Regular.woff" as="font" type="font/woff2" />
 <link rel="preload" href="/fonts/Pretendard-Light.woff" as="font" type="font/woff2" />
 <meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
+<meta property="twitter:title" content={pageTitle} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:card" content="summary_large_image" />

@@ -12,6 +12,7 @@ export const containerStyle = style([
   {
     height: 95,
     borderBottom: `1px solid ${vars.color.border}`,
+    backgroundColor: vars.color.background,
   },
 ]);
 
@@ -20,12 +21,46 @@ export const wrapStyle = style([
     height: 'full',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-between',
   }),
   {
     width: breakPoints['desktop'],
   },
 ]);
 
-export const textStyle = sprinkles({
+export const titleWrapStyle = style([
+  sprinkles({
+    fontFamily: 'base',
+    textDecoration: 'none',
+  }),
+  { color: vars.color.base, fontSize: vars.fontSize.xxlarge },
+]);
+
+export const titleStyle = sprinkles({
   fontFamily: 'base',
 });
+
+export const boldTitleStyle = sprinkles({
+  fontFamily: 'heading',
+});
+
+export const anchorWrapStyle = sprinkles({
+  display: 'flex',
+  alignItems: 'center',
+  gap: 12,
+});
+
+export const anchorStyle = style([
+  sprinkles({
+    fontFamily: 'heading',
+    textDecoration: 'none',
+  }),
+  {
+    fontSize: vars.fontSize.xlarge,
+    color: vars.color.base,
+    ':hover': {
+      textDecoration: 'underline',
+      cursor: 'pointer',
+    },
+  },
+]);

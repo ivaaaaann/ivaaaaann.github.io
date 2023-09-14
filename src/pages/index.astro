@@ -1,9 +1,9 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../constants';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero';
+import type { breakPoints } from '../styles/token';
 ---
 
-<Layout>hello</Layout>
+<Layout>
+  <Hero width={900} height={250} src="/blog-placeholder-about.jpg" alt="hero"/>
+</Layout>

@@ -1,31 +1,35 @@
 ---
 import MetaTags from '../components/MetaTags.astro';
-import { SITE_DESCRIPTION } from '../constants';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../constants';
 import Footer from './Footer';
 import Header from './Header';
 import '../styles/globalStyle.css';
 import '../styles/theme.css';
 import '../styles/fonts.css';
+import { containerStyle, wrapStyle } from './layout.css';
 
 export interface Props {
   url?: string;
-  title?: string;
   pageTitle?: string;
   description?: string;
 }
 
-const { title = '', pageTitle, url = '/', description = SITE_DESCRIPTION } = Astro.props;
+const { pageTitle = SITE_TITLE, url = '/', description = SITE_DESCRIPTION } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="ko">
   <head>
-    <MetaTags url={url} title={title} description={description} />
-    <title>{pageTitle !== undefined ? pageTitle : title} | 임동현</title>
+    <MetaTags url={url} pageTitle={pageTitle} description={description} />
+    <title>{pageTitle} | 임동현</title>
   </head>
   <body>
-    <Header />
-    <slot />
-    <Footer />
+    <div class={containerStyle}>
+      <Header />
+      <main class={wrapStyle}>
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
