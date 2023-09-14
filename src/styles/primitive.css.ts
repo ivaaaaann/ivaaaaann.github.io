@@ -1,5 +1,5 @@
 import { defineProperties } from '@vanilla-extract/sprinkles';
-import { space } from './token';
+import { fonts, space } from './token';
 
 export const definedPrimitiveProperties = defineProperties({
   properties: {
@@ -75,6 +75,11 @@ export const definedPrimitiveProperties = defineProperties({
       normal: 'normal',
       nowrap: 'nowrap',
       'pre-wrap': 'pre-wrap',
+    },
+    fontFamily: {
+      heading: fonts.heading,
+      base: fonts.base,
+      light: fonts.light,
     },
     gap: space,
     paddingTop: space,

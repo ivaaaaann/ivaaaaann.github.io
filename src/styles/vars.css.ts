@@ -11,6 +11,11 @@ export const vars = createGlobalThemeContract(
       base: null,
       heading: null,
     },
+    fontFamily: {
+      heading: null,
+      base: null,
+      light: null,
+    },
     fontSize: {
       xxsmal: null,
       xsmall: null,

@@ -8,10 +8,16 @@ export const breakPoints: Record<media, string> = {
 export const color = {
   background: '#fff',
   base: '#3a3d40',
-  border: '#3a3d40',
+  border: '#d1d1d1',
   primary: '#244382',
   hover: '#c45a8d',
   focus: '#c45a8d',
+};
+
+export const fonts = {
+  base: 'PretendardRegular',
+  heading: 'PretendardBold',
+  light: 'PetendardLight',
 };
 
 export const space = {

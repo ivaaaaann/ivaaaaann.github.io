@@ -27,6 +27,9 @@ const isBlogPost = url.startsWith('/blog/');
 <link rel="canonical" href={canonicalURL} data-baseprotocol="https:" data-basehost={SITE_HOST} />
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href={`${SITE_URL}/rss.xml`} />
 <link rel="sitemap" href={`${SITE_URL}/sitemap-index.xml`} />
+<link rel="preload" href="/fonts/Pretendard-Bold.woff" as="font" type="font/woff2" />
+<link rel="preload" href="/fonts/Pretendard-Regular.woff" as="font" type="font/woff2" />
+<link rel="preload" href="/fonts/Pretendard-Light.woff" as="font" type="font/woff2" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />

@@ -1,5 +1,5 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
-import { space, color } from './token';
+import { space, color, fonts } from './token';
 import { vars } from './vars.css';
 
 createGlobalTheme(':root', vars, {
@@ -7,6 +7,11 @@ createGlobalTheme(':root', vars, {
   fontWeight: {
     base: '400',
     heading: '600',
+  },
+  fontFamily: {
+    heading: fonts.heading,
+    base: fonts.heading,
+    light: fonts.light,
   },
   fontSize: {
     xxsmal: '10px',

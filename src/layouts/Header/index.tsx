@@ -1,10 +1,12 @@
 import React from 'react';
-import { containerStyle } from './header.css';
+import { containerStyle, wrapStyle, textStyle } from './header.css';
 
 const Header = () => {
   return (
     <header className={containerStyle}>
-      <nav>header</nav>
+      <nav className={wrapStyle}>
+        <p className={textStyle}>헤더입니다</p>
+      </nav>
     </header>
   );
 };
