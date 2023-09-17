@@ -1,9 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero';
-import type { breakPoints } from '../styles/token';
+import Flex from '../components/Flex';
+import {
+  heroWrapStyle,
+  heroTitleStyle,
+  postCoverContainerStyle,
+  postCoverTitleStyle,
+  postCoverDescriptionStyle,
+} from './index.css';
+import { getCollection } from 'astro:content';
+import Card from '../components/Card';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
 ---
 
 <Layout>
-  <Hero width={900} height={250} src="/blog-placeholder-about.jpg" alt="hero"/>
+  <Flex gap={20} direction="column">
+    <div class={heroWrapStyle}>
+      <Hero width={900} height={250} src="/main-hero.jpeg" alt="hero" />
+      <p class={heroTitleStyle}>
+        안녕하세요, 저의 청춘을 담은 곳입니다.<br />
+         즐겁게 감상해주시면 감사하겠습니다 :)
+      </p>
+    </div>
+    <section>
+      <Flex direction="column" gap={20}>
+        {
+          posts.map((post) => (
+            <article class={postCoverContainerStyle}>
+              <h3 class={postCoverTitleStyle}>{post.data.title}</h3>
+              <p class={postCoverDescriptionStyle}>{post.data.description}</p>
+            </article>
+          ))
+        }
+      </Flex>
+    </section>
+  </Flex>
 </Layout>

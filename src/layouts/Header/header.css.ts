@@ -8,11 +8,15 @@ export const containerStyle = style([
     width: 'full',
     display: 'flex',
     justifyContent: 'center',
+    position: 'fixed',
   }),
   {
     height: 95,
-    borderBottom: `1px solid ${vars.color.border}`,
     backgroundColor: vars.color.background,
+    opacity: 0.85,
+    top: 0,
+    left: 0,
+    zIndex: 10,
   },
 ]);
 

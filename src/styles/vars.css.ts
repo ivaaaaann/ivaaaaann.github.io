@@ -27,9 +27,14 @@ export const vars = createGlobalThemeContract(
       xxxlarge: null,
     },
     lineHeight: {
-      base: null,
+      xxsmal: null,
+      xsmall: null,
       small: null,
-      heading: null,
+      medium: null,
+      large: null,
+      xlarge: null,
+      xxlarge: null,
+      xxxlarge: null,
     },
     space: {
       0: null,

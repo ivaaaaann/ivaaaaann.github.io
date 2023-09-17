@@ -24,9 +24,14 @@ createGlobalTheme(':root', vars, {
     xxxlarge: '28px',
   },
   lineHeight: {
+    xxsmal: '12px',
+    xsmall: '14px',
     small: '16px',
-    base: '14px',
-    heading: '22px',
+    medium: '18px',
+    large: '20px',
+    xlarge: '22px',
+    xxlarge: '26px',
+    xxxlarge: '30px',
   },
   space: space,
   radius: {

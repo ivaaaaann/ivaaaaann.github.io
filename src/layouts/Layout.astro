@@ -1,5 +1,4 @@
 ---
-import MetaTags from '../components/MetaTags.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../constants';
 import Footer from './Footer';
 import Header from './Header';
@@ -7,6 +6,7 @@ import '../styles/globalStyle.css';
 import '../styles/theme.css';
 import '../styles/fonts.css';
 import { containerStyle, wrapStyle } from './layout.css';
+import Metatags from '../components/Metatags/index.astro';
 
 export interface Props {
   url?: string;
@@ -20,7 +20,7 @@ const { pageTitle = SITE_TITLE, url = '/', description = SITE_DESCRIPTION } = As
 <!doctype html>
 <html lang="ko">
   <head>
-    <MetaTags url={url} pageTitle={pageTitle} description={description} />
+    <Metatags url={url} pageTitle={pageTitle} description={description} />
     <title>{pageTitle} | 임동현</title>
   </head>
   <body>
