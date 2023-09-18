@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero';
+import Hero from '../components/Hero/index.astro';
 import Flex from '../components/Flex';
 import {
   heroWrapStyle,
@@ -8,9 +8,9 @@ import {
   postCoverContainerStyle,
   postCoverTitleStyle,
   postCoverDescriptionStyle,
+  postCoverTagStyle,
 } from './index.css';
 import { getCollection } from 'astro:content';
-import Card from '../components/Card';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
@@ -18,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout>
-  <Flex gap={20} direction="column">
+  <Flex gap={48} direction="column">
     <div class={heroWrapStyle}>
       <Hero width={900} height={250} src="/main-hero.jpeg" alt="hero" />
       <p class={heroTitleStyle}>
@@ -33,6 +33,11 @@ const posts = (await getCollection('blog')).sort(
             <article class={postCoverContainerStyle}>
               <h3 class={postCoverTitleStyle}>{post.data.title}</h3>
               <p class={postCoverDescriptionStyle}>{post.data.description}</p>
+              <Flex align="center" gap={10} wrap="wrap">
+                {post.data.tags.map((tag) => (
+                  <span class={postCoverTagStyle}>{tag}</span>
+                ))}
+              </Flex>
             </article>
           ))
         }

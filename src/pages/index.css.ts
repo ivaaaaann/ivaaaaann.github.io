@@ -44,11 +44,33 @@ export const postCoverTitleStyle = style([
 
 export const postCoverDescriptionStyle = style([
   sprinkles({
+    width: 'full',
     fontFamily: 'base',
     margin: 0,
+    marginY: 16,
+    overflow: 'hidden',
   }),
   {
     fontSize: vars.fontSize.medium,
-    marginTop: 15,
+    lineHeight: vars.lineHeight.xxlarge,
+    display: '-webkit-flex',
+    textOverflow: 'ellipsis',
+    WebkitLineClamp: 2,
+    WebkitBoxOrient: 'vertical',
+    height: 52,
+    wordBreak: 'break-word',
+  },
+]);
+
+export const postCoverTagStyle = style([
+  sprinkles({
+    fontFamily: 'base',
+    padding: 6,
+  }),
+  {
+    fontSize: 'small',
+    borderRadius: vars.radius[6],
+    backgroundColor: vars.color.gray300,
+    color: 'white',
   },
 ]);

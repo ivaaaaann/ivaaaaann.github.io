@@ -1,9 +1,9 @@
 ---
-title: '내가 가장 잘 아는줄 알았던, 하지만 잘 알지 못했던'
-description: '디자인 시스템과 컴포넌트 라이브러리의 차이점이 뭘까요? 생각보다 디자인 시스템은 많은 의미를 담고 있습니다. 이 글에서는 디자인 시스템의 근본적인 개념에 대해 소개합니다.'
+title: '상수를 UPPERCASE로 선언하는 이유'
+description: '변수를 선언할때는 고려해야 하는것 중 대표적인 하나가 네이밍컨벤션입니다. 네이밍 컨벤션 중에서도 또 여러개로 나뉘죠. 하나로 통일하면 단순하고 좋을텐데 왜 그럴까요? 이 글에서는 변수 네이밍 컨벤션의 유래에 대한 내용을 담았습니다.'
 pubDate: 'Jul 08 2022'
 heroImage: ''
-tags: ['디자인 시스템']
+tags: ['JS']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.

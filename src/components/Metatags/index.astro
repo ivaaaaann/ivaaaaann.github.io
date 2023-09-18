@@ -1,5 +1,6 @@
 ---
 import { SITE_URL, SITE_HOST, SITE_TITLE } from '../../constants';
+import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
   url: string;
@@ -34,3 +35,4 @@ const isBlogPost = url.startsWith('/blog/');
 <meta property="twitter:title" content={pageTitle} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:card" content="summary_large_image" />
+<ViewTransitions />

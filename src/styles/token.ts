@@ -9,7 +9,7 @@ export const color = {
   background: '#fff',
   base: '#3a3d40',
   border: '#d1d1d1',
-  primary: '#244382',
+  primary: '#003853',
   hover: '#c45a8d',
   focus: '#c45a8d',
   red50: '#ffebee',

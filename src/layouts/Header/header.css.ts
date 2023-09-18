@@ -44,9 +44,14 @@ export const titleStyle = sprinkles({
   fontFamily: 'base',
 });
 
-export const boldTitleStyle = sprinkles({
-  fontFamily: 'heading',
-});
+export const boldTitleStyle = style([
+  sprinkles({
+    fontFamily: 'heading',
+  }),
+  {
+    color: vars.color.primary,
+  },
+]);
 
 export const anchorWrapStyle = sprinkles({
   display: 'flex',

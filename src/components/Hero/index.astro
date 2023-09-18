@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+import { heroStyle } from './hero.css';
+
+export interface Props {
+  width: number;
+  height: number;
+  src: string;
+  alt: string;
+}
+
+const { width, height, src, alt } = Astro.props;
+---
+
+<Image class={heroStyle} width={width} height={height} src={src} alt={alt} />
