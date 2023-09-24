@@ -12,6 +12,7 @@ export const containerStyle = style([
   }),
   style({
     minHeight: '100vh',
+    backgroundColor: vars.color.background,
   }),
 ]);
 

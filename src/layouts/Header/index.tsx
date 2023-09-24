@@ -13,12 +13,12 @@ const Header = () => {
   return (
     <header className={containerStyle}>
       <nav className={wrapStyle}>
-        <a href="/" className={titleWrapStyle}>
-          <p>
+        <h1 className={titleWrapStyle}>
+          <a href="/">
             <span className={titleStyle}>Ivan's</span>
             <span className={boldTitleStyle}>Youth</span>
-          </p>
-        </a>
+          </a>
+        </h1>
         <div className={anchorWrapStyle}>
           <a href="/about" className={anchorStyle}>
             About

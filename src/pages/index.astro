@@ -13,7 +13,7 @@ import {
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
@@ -31,13 +31,15 @@ const posts = (await getCollection('blog')).sort(
         {
           posts.map((post) => (
             <article class={postCoverContainerStyle}>
-              <h3 class={postCoverTitleStyle}>{post.data.title}</h3>
-              <p class={postCoverDescriptionStyle}>{post.data.description}</p>
-              <Flex align="center" gap={10} wrap="wrap">
-                {post.data.tags.map((tag) => (
-                  <span class={postCoverTagStyle}>{tag}</span>
-                ))}
-              </Flex>
+              <a href={`/post/${post.slug}`}>
+                <h3 class={postCoverTitleStyle}>{post.data.title}</h3>
+                <p class={postCoverDescriptionStyle}>{post.data.description}</p>
+                <Flex align="center" gap={10} wrap="wrap">
+                  {post.data.tags.map((tag) => (
+                    <span class={postCoverTagStyle}>{tag}</span>
+                  ))}
+                </Flex>
+              </a>
             </article>
           ))
         }

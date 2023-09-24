@@ -25,6 +25,7 @@ export const postCoverContainerStyle = style([
   sprinkles({
     width: 'full',
     paddingBottom: 40,
+    textDecoration: 'none',
   }),
   {
     borderBottom: `1px solid ${vars.color.border}`,
@@ -57,7 +58,7 @@ export const postCoverDescriptionStyle = style([
     textOverflow: 'ellipsis',
     WebkitLineClamp: 2,
     WebkitBoxOrient: 'vertical',
-    height: 52,
+    maxHeight: 52,
     wordBreak: 'break-word',
   },
 ]);
