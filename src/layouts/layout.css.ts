@@ -20,7 +20,6 @@ export const wrapStyle = style([
   sprinkles({
     display: 'flex',
     flexDirection: 'column',
-    paddingY: 20,
   }),
   {
     paddingTop: 95,

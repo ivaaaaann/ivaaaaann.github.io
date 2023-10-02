@@ -1,8 +1,9 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import TableOfContents from '../../components/TableOfContents';
 import '../../styles/markdown.css';
-import { contentContainerStyle } from './index.css';
+import { contentContainerStyle, sectionContainerStyle } from './index.css';
 
 export const getStaticPaths = async () => {
   const posts = await getCollection('blog');
@@ -19,7 +20,10 @@ const { Content } = await post.render();
 ---
 
 <Layout>
-  <article class={contentContainerStyle}>
-    <Content />
-  </article>
+  <section class={sectionContainerStyle}>
+    <article id="markdown-container" class={contentContainerStyle}>
+      <Content />
+    </article>
+    <TableOfContents client:only />
+  </section>
 </Layout>
