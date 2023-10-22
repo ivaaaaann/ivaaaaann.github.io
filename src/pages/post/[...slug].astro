@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import TableOfContents from '../../components/TableOfContents';
+import TableOfContents from '../../components/TableOfContents/index.tsx';
 import '../../styles/markdown.css';
 import { contentContainerStyle, sectionContainerStyle } from './index.css';
 
@@ -21,9 +21,10 @@ const { Content } = await post.render();
 
 <Layout>
   <section class={sectionContainerStyle}>
-    <article id="markdown-container" class={contentContainerStyle}>
-      <Content />
-    </article>
-    <TableOfContents client:only />
+    <TableOfContents>
+      <article id="markdown-container" class={contentContainerStyle}>
+        <Content />
+      </article>
+    </TableOfContents>
   </section>
 </Layout>

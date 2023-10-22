@@ -9,6 +9,10 @@ export const tableOfContentsContainer = style([
   }),
   {
     position: 'sticky',
-    top: 10,
+    top: 100,
+    right: 0,
+    height: 'min-content',
   },
 ]);
+
+export const tableOfContentContaienr = style([]);
