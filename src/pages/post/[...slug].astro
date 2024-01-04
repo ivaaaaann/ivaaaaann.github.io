@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import TableOfContents from '../../components/TableOfContents/index.tsx';
 import '../../styles/markdown.css';
 import { contentContainerStyle, sectionContainerStyle } from './index.css';
+import { convert } from '../../utils/functions/convert';
 
 export const getStaticPaths = async () => {
   const posts = await getCollection('blog');
@@ -21,10 +22,15 @@ const { Content } = await post.render();
 
 <Layout>
   <section class={sectionContainerStyle}>
-    <TableOfContents>
-      <article id="markdown-container" class={contentContainerStyle}>
-        <Content />
-      </article>
-    </TableOfContents>
+    <article id="markdown-container" class={contentContainerStyle}>
+      <Content />
+    </article>
+    {
+      convert(Content, (Content) => (
+        <TableOfContents>
+          <Content />
+        </TableOfContents>
+      ))
+    }
   </section>
 </Layout>
