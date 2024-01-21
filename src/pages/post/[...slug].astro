@@ -8,6 +8,7 @@ import { convert } from '../../utils/functions/convert';
 
 export const getStaticPaths = async () => {
   const posts = await getCollection('blog');
+
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
@@ -17,6 +18,7 @@ export const getStaticPaths = async () => {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
+
 const { Content } = await post.render();
 ---
 

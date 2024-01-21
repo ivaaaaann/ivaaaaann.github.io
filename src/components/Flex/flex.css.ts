@@ -1,7 +1,7 @@
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
 import { sprinkles } from '../../styles/sprinkles.css';
 import { primitiveProperties } from '../../styles/primitive.css';
-import { createVariantsWithSprinkles } from '../util/createVariantsWithSprinkles';
+import { createVariantsWithSprinkles } from '../../utils/style/createVariantsWithSprinkles';
 
 export const containerStyle = recipe({
   base: sprinkles({ display: 'flex' }),

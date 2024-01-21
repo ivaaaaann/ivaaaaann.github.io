@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 import { sprinkles } from '../../styles/sprinkles.css';
-import { createVariantsWithSprinkles } from '../util/createVariantsWithSprinkles';
+import { createVariantsWithSprinkles } from '../../utils/style/createVariantsWithSprinkles';
 import { recipe } from '@vanilla-extract/recipes';
 import { primitiveProperties } from '../../styles/primitive.css';
 import { vars } from '../../styles/vars.css';

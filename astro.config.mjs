@@ -4,11 +4,10 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import remakToc from 'remark-toc';
-import { astroImageTools } from 'astro-imagetools';
 
 export default defineConfig({
   site: 'https://example.com',
-  integrations: [react(), mdx(), sitemap(), astroImageTools],
+  integrations: [react(), mdx(), sitemap()],
   vite: {
     plugins: [vanillaExtractPlugin()],
   },

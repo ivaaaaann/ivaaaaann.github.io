@@ -1,0 +1,26 @@
+---
+import {
+  containerStyle,
+  profileDescriptionContainerStyle,
+  profileDescriptionStyle,
+  profileImageStyle,
+  profileNameStyle,
+} from './footer.css';
+import { Image } from 'astro:assets';
+import Flex from '../../components/Flex';
+---
+
+<footer class={containerStyle}>
+  <Flex gap={20}>
+    <Image class={profileImageStyle} src={'/assets/Ivan.jpg'} width={140} height={140} alt="ivan" />
+    <Flex direction="column">
+      <Flex direction="column" className={profileDescriptionContainerStyle} justify="space-between">
+        <span class={profileNameStyle}>Ivan Lim</span>
+        <p class={profileDescriptionStyle}>
+          주로 어떻게 하면 행복하게 살 수 있을까를 고민합니다.<br />
+           기술적 고찰과, 회고 정도를 쓰고 있습니다.
+        </p>
+      </Flex>
+    </Flex>
+  </Flex>
+</footer>
