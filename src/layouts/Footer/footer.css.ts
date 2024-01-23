@@ -44,3 +44,23 @@ export const profileDescriptionStyle = style({
   fontFamily: vars.fontFamily['light'],
   lineHeight: vars.lineHeight['xlarge'],
 });
+
+export const footerSocialIconStyle = style({
+  width: 40,
+  height: 40,
+  cursor: 'pointer',
+  padding: 12,
+  borderRadius: '100%',
+  boxSizing: 'border-box',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  ':hover': { backgroundColor: vars.color.hover },
+});
+
+export const footerCopyRightTextStyle = style({
+  fontSize: vars.fontSize['small'],
+  fontWeight: vars.fontWeight['base'],
+  color: vars.color.base,
+  fontFamily: vars.fontFamily['light'],
+});
