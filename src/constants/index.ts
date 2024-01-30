@@ -1,4 +1,4 @@
-export const SITE_HOST = 'ivans-youth.vercel.app';
+export const SITE_HOST = 'ivaaaaann.github.io';
 export const SITE_URL = `https://${SITE_HOST}`;
 export const SITE_TITLE = "Ivan's Youth";
 export const SITE_DESCRIPTION =

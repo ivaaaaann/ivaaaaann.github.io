@@ -6,7 +6,8 @@ import mdx from '@astrojs/mdx';
 import remakToc from 'remark-toc';
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://ivaaaaann.github.io',
+  base: '/',
   integrations: [react(), mdx(), sitemap()],
   vite: {
     plugins: [vanillaExtractPlugin()],
