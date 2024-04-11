@@ -71,6 +71,11 @@ globalStyle('#markdown-container > p > mark', {
   borderRadius: vars.radius[4],
 });
 
+globalStyle('#markdown-container > p > a', {
+  color: vars.color.primary,
+  textDecoration: 'underline',
+});
+
 globalStyle(`#markdown-container > aside`, {
   backgroundColor: vars.color.hover,
   padding: '20px',
