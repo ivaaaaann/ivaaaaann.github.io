@@ -2,6 +2,7 @@ import React from 'react';
 import Flex from '../../common/Flex';
 import Txt from '../../common/Txt';
 import { dateFormat } from '../../../utils/date';
+import { isNullish } from '../../../utils/functions/is';
 
 type Props = {
   companyName: string;
@@ -19,7 +20,7 @@ const CarrerSectionSummary = ({ companyName, workingDay, summary, position }: Pr
         </Txt>
         <Txt color="gray500" size="small">
           {`${dateFormat(workingDay[0], 'yyyy.MM')} ~ ${
-            workingDay[1] == null ? '현재' : dateFormat(workingDay[1], 'yyyy.MM')
+            isNullish(workingDay[1]) ? '현재' : dateFormat(workingDay[1], 'yyyy.MM')
           }`}
         </Txt>
       </Flex>
