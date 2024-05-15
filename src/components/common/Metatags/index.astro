@@ -1,6 +1,6 @@
 ---
-import { SITE_URL, SITE_HOST, SITE_TITLE } from '../../constants';
-import { ViewTransitions } from 'astro:transitions';
+import {SITE_URL, SITE_HOST, SITE_TITLE} from '../../../constants';
+import {ViewTransitions} from 'astro:transitions';
 
 export interface Props {
   url: string;
@@ -8,7 +8,7 @@ export interface Props {
   description: string;
 }
 
-const { pageTitle, url, description } = Astro.props;
+const {pageTitle, url, description} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 

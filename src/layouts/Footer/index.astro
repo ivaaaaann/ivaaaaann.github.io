@@ -1,28 +1,20 @@
 ---
-import {
-  containerStyle,
-  footerCopyRightTextStyle,
-  footerSocialIconStyle,
-  profileDescriptionContainerStyle,
-  profileDescriptionStyle,
-  profileImageStyle,
-  profileNameStyle,
-} from './footer.css';
-import { Image } from 'astro:assets';
-import Flex from '../../components/Flex';
-import { SOCIAL_GITHUB, SOCIAL_GMAIL, SOCIAL_LINKEDIN } from '../../constants';
+import {containerStyle, footerCopyRightTextStyle, footerSocialIconStyle} from './footer.css';
+import Flex from '../../components/common/Flex';
+import Icon, {type IconKey} from '../../components/common/Icon/index.astro';
+import {SOCIAL_GITHUB, SOCIAL_GMAIL, SOCIAL_LINKEDIN} from '../../constants';
 
-const SOCIAL_LINK_ICONS_MAP = [
+const SOCIAL_LINK_ICONS_MAP: {icon: IconKey; link: string}[] = [
   {
-    icon: '/icons/email-icon.svg',
+    icon: 'mail',
     link: SOCIAL_GMAIL,
   },
   {
-    icon: '/icons/github-icon.svg',
+    icon: 'github',
     link: SOCIAL_GITHUB,
   },
   {
-    icon: '/icons/linkedIn-icon.svg',
+    icon: 'linkedIn',
     link: SOCIAL_LINKEDIN,
   },
 ];
@@ -32,9 +24,9 @@ const SOCIAL_LINK_ICONS_MAP = [
   <Flex align="center" justify="space-between">
     <Flex align="center" gap={10}>
       {
-        SOCIAL_LINK_ICONS_MAP.map(({ icon, link }) => (
+        SOCIAL_LINK_ICONS_MAP.map(({icon, link}) => (
           <a class={footerSocialIconStyle} href={link} target="_blank" rel="noopener noreferrer">
-            <Image width={20} height={20} src={icon} alt="social" />
+            <Icon name={icon} size={20} />
           </a>
         ))
       }

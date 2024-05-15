@@ -19,6 +19,11 @@ const Header = () => {
             <span className={boldTitleStyle}>Youth</span>
           </a>
         </h1>
+        <div className={anchorWrapStyle}>
+          <a href="/about" className={anchorStyle}>
+            About
+          </a>
+        </div>
       </nav>
     </header>
   );

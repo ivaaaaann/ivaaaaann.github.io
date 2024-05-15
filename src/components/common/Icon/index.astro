@@ -1,0 +1,22 @@
+---
+import {Image} from 'astro:assets';
+
+const ICON_MAP = {
+  mail: '/icons/email-icon.svg',
+  github: '/icons/github-icon.svg',
+  linkedIn: '/icons/linkedIn-icon.svg',
+} as const;
+
+export type IconKey = keyof typeof ICON_MAP;
+
+interface Props {
+  name: IconKey;
+  size: number;
+  className?: string;
+  alt?: string;
+}
+
+const {name, size, className, alt} = Astro.props;
+---
+
+<Image src={ICON_MAP[name]} alt={alt ?? name} width={size} height={size} class={className} />

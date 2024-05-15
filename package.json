@@ -21,6 +21,7 @@
     "@vanilla-extract/vite-plugin": "^3.9.0",
     "astro": "^4.2.1",
     "clsx": "^2.0.0",
+    "date-fns": "^3.6.0",
     "htmlparser2": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

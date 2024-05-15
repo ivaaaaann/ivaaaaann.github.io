@@ -14,7 +14,7 @@ createGlobalTheme(':root', vars, {
     light: fonts.light,
   },
   fontSize: {
-    xxsmal: '10px',
+    xxsmall: '10px',
     xsmall: '12px',
     small: '14px',
     medium: '16px',
@@ -24,7 +24,7 @@ createGlobalTheme(':root', vars, {
     xxxlarge: '28px',
   },
   lineHeight: {
-    xxsmal: '12px',
+    xxsmall: '12px',
     xsmall: '14px',
     small: '16px',
     medium: '18px',

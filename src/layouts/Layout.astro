@@ -1,12 +1,12 @@
 ---
-import { SITE_DESCRIPTION, SITE_TITLE } from '../constants';
+import {SITE_DESCRIPTION, SITE_TITLE} from '../constants';
 import Footer from './Footer/index.astro';
 import Header from './Header';
 import '../styles/globalStyle.css';
 import '../styles/theme.css';
 import '../styles/fonts.css';
-import { containerStyle, wrapStyle } from './layout.css';
-import Metatags from '../components/Metatags/index.astro';
+import {containerStyle, wrapStyle} from './layout.css';
+import Metatags from '../components/common/Metatags/index.astro';
 
 export interface Props {
   url?: string;
@@ -14,14 +14,14 @@ export interface Props {
   description?: string;
 }
 
-const { pageTitle = SITE_TITLE, url = '/', description = SITE_DESCRIPTION } = Astro.props;
+const {pageTitle = SITE_TITLE, url = '/', description = SITE_DESCRIPTION} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="ko">
   <head>
     <Metatags url={url} pageTitle={pageTitle} description={description} />
-    <title>{pageTitle} | 임동현</title>
+    <title>{pageTitle} | Ivan's Youth</title>
   </head>
   <body>
     <div class={containerStyle}>

@@ -1,0 +1,12 @@
+---
+import {dividerContainer} from './index.css';
+import {cx} from '@emotion/css';
+
+interface Props {
+  className?: string;
+}
+
+const {className} = Astro.props;
+---
+
+<hr class={cx(dividerContainer, className)} />
