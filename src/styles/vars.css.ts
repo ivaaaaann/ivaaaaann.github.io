@@ -17,7 +17,7 @@ export const vars = createGlobalThemeContract(
       light: null,
     },
     fontSize: {
-      xxsmal: null,
+      xxsmall: null,
       xsmall: null,
       small: null,
       medium: null,
@@ -27,7 +27,7 @@ export const vars = createGlobalThemeContract(
       xxxlarge: null,
     },
     lineHeight: {
-      xxsmal: null,
+      xxsmall: null,
       xsmall: null,
       small: null,
       medium: null,

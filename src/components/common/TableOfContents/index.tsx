@@ -3,7 +3,7 @@ import React, { Children, isValidElement, type ReactNode } from 'react';
 import { tableOfContentItemStyle, tableOfContentsContainer } from './tableOfContents.css';
 import type { TableOfContent } from './model';
 import { isTableOfcontentDepth } from './util';
-import { convert } from '../../utils/functions/convert';
+import { convert } from '../../../utils/functions/convert';
 
 const headingElementRegularExpression = /^h[1-6]$/;
 

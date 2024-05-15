@@ -1,16 +1,16 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import {type CollectionEntry, getCollection} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import TableOfContents from '../../components/TableOfContents/index.tsx';
+import TableOfContents from '../../components/common/TableOfContents/index.tsx';
 import '../../styles/markdown.css';
-import { contentContainerStyle, sectionContainerStyle } from './index.css';
-import { convert } from '../../utils/functions/convert';
+import {contentContainerStyle, sectionContainerStyle} from './index.css';
+import {convert} from '../../utils/functions/convert';
 
 export const getStaticPaths = async () => {
   const posts = await getCollection('blog');
 
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: {slug: post.slug},
     props: post,
   }));
 };
@@ -19,10 +19,10 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 
-const { Content } = await post.render();
+const {Content} = await post.render();
 ---
 
-<Layout>
+<Layout pageTitle={post.data.title}>
   <section class={sectionContainerStyle}>
     <article id="markdown-container" class={contentContainerStyle}>
       <Content />
