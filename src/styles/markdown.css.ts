@@ -125,3 +125,11 @@ globalStyle(`#markdown-container ol > li`, {
   margin: '16px 0 16px 0',
   marginLeft: '16px',
 });
+
+globalStyle(`#markdown-container small`, {
+  display: 'flex',
+  width: '100%',
+  justifyContent: 'center',
+  fontSize: vars.fontSize.small,
+  color: vars.color.gray400,
+});
