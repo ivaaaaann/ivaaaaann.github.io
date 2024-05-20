@@ -11,6 +11,8 @@ import {
   postCoverTagStyle,
 } from './index.css';
 import {getCollection} from 'astro:content';
+import Txt from '../components/common/Txt';
+import {dateFormat} from '../utils/date';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -27,17 +29,22 @@ const posts = (await getCollection('blog')).sort(
       </p>
     </div>
     <section>
-      <Flex direction="column" gap={20}>
+      <Flex direction="column" gap={40}>
         {
           posts.map((post) => (
             <article class={postCoverContainerStyle}>
               <a href={`/post/${post.slug}`}>
                 <h3 class={postCoverTitleStyle}>{post.data.title}</h3>
                 <p class={postCoverDescriptionStyle}>{post.data.description}</p>
-                <Flex align="center" gap={10} wrap="wrap">
-                  {post.data.tags.map((tag) => (
-                    <span class={postCoverTagStyle}>{tag}</span>
-                  ))}
+                <Flex align="center" justify="space-between">
+                  <Flex align="center" gap={10} wrap="wrap">
+                    {post.data.tags.map((tag) => (
+                      <span class={postCoverTagStyle}>{tag}</span>
+                    ))}
+                  </Flex>
+                  <Txt size="small" color="gray400">
+                    {dateFormat(post.data.pubDate, 'yyyy. M. d')}
+                  </Txt>
                 </Flex>
               </a>
             </article>
