@@ -1,7 +1,7 @@
 import { globalStyle } from '@vanilla-extract/css';
 import { vars } from './vars.css';
 
-globalStyle('#markdown-container > h1, h2, h3, h4, ul, blockquote, aside', {
+globalStyle('#markdown-container > h1, h2, h3, h4, blockquote, aside', {
   margin: '20px 0 20px 0',
 });
 
@@ -40,6 +40,7 @@ globalStyle('#markdown-container > del', {
 
 globalStyle('#markdown-container > p > strong', {
   fontWeight: vars.fontWeight.heading,
+  fontFamily: vars.fontFamily.heading,
   margin: '0px 2px',
 });
 
@@ -116,9 +117,19 @@ globalStyle(`#markdown-container pre`, {
 });
 
 globalStyle(`#markdown-container ul > li`, {
-  marginLeft: '8px',
+  margin: '16px 0 16px 0',
+  marginLeft: '16px',
 });
 
-globalStyle(`#markdown-container ol`, {
-  padding: '16px',
+globalStyle(`#markdown-container ol > li`, {
+  margin: '16px 0 16px 0',
+  marginLeft: '16px',
+});
+
+globalStyle(`#markdown-container small`, {
+  display: 'flex',
+  width: '100%',
+  justifyContent: 'center',
+  fontSize: vars.fontSize.small,
+  color: vars.color.gray400,
 });
