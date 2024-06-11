@@ -72,7 +72,7 @@ globalStyle('#markdown-container > p > mark', {
   borderRadius: vars.radius[4],
 });
 
-globalStyle('#markdown-container > p > a', {
+globalStyle('#markdown-container a', {
   color: vars.color.primary,
   textDecoration: 'underline',
 });
