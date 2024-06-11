@@ -1,7 +1,7 @@
 ---
 title: '개인 블로그가 Astro인 이유'
 description: '이번에 새롭게 만든 개인블로그를 왜 Astro 프레임워크로 만들게 되었는지를 소개합니다.'
-pubDate: 'Jul 08 2022'
+pubDate: '2024-06-01'
 heroImage: ''
 tags: ['Astro']
 ---
