@@ -81,7 +81,22 @@ globalStyle(`#markdown-container > aside`, {
   backgroundColor: vars.color.hover,
   padding: '20px',
   fontSize: vars.fontSize.medium,
-  lineHeight: vars.lineHeight.large,
+  lineHeight: vars.lineHeight.xxlarge,
+});
+
+globalStyle(`#markdown-container > aside > dd`, {
+  fontSize: vars.fontSize.medium,
+  lineHeight: vars.lineHeight.xxlarge,
+  color: vars.color.gray400,
+});
+
+globalStyle(`#markdown-container > aside > small`, {
+  display: 'block',
+  fontSize: vars.fontSize.medium,
+  color: vars.color.gray400,
+  lineHeight: vars.lineHeight.xxlarge,
+  textAlign: 'right',
+  marginTop: '10px',
 });
 
 globalStyle(`#markdown-container table`, {
