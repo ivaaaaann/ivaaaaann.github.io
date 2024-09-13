@@ -1,4 +1,4 @@
-export type Carrer = {
+export type Career = {
   companyLogo: ImageMetadata;
   companyName: string;
   summary: string;

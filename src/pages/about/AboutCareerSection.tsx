@@ -1,14 +1,14 @@
 import React from 'react';
-import type { Carrer } from '../../models/Carrer';
 import CareerSection from '../../components/about/CareerSection';
 import Flex from '../../components/common/Flex';
+import type { Career } from '../../models/Career';
 
 type Props = {
-  carrer: Carrer;
+  career: Career;
 };
 
-const AboutCarrerSection = ({ carrer }: Props) => {
-  const { companyLogo, companyName, workingDay, summary, position, performances } = carrer;
+const AboutCareerSection = ({ career }: Props) => {
+  const { companyLogo, companyName, workingDay, summary, position, performances } = career;
 
   return (
     <CareerSection companyLogo={companyLogo}>
@@ -31,4 +31,4 @@ const AboutCarrerSection = ({ carrer }: Props) => {
   );
 };
 
-export default AboutCarrerSection;
+export default AboutCareerSection;

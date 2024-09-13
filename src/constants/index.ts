@@ -1,5 +1,5 @@
-import type { Carrer } from '../models/Carrer';
 import QuotaLabLogo from '../../public/assets/careerLogos/quotalabLogo.svg';
+import type { Career } from '../models/Career';
 
 export const SITE_HOST = 'ivaaaaann.github.io';
 export const SITE_URL = `https://${SITE_HOST}`;
@@ -16,7 +16,7 @@ export const SOCIAL_LINKEDIN =
 export const SOCIAL_GMAIL = 'mailto:ldh165163@gmail.com';
 export const SOCIAL_NOTION = 'https://ldh3907.notion.site/1fd3912a2baa4c1996d4bf2daacbb2f7';
 
-export const QUOTALAB_CARRER: Carrer = {
+export const QUOTALAB_CAREER: Career = {
   companyLogo: QuotaLabLogo,
   companyName: '쿼타랩',
   workingDay: [new Date(2023, 6, 24), null],

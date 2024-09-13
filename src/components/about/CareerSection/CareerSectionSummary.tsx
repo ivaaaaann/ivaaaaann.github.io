@@ -11,7 +11,7 @@ type Props = {
   workingDay: [Date, Date | null];
 };
 
-const CarrerSectionSummary = ({ companyName, workingDay, summary, position }: Props) => {
+const CareerSectionSummary = ({ companyName, workingDay, summary, position }: Props) => {
   return (
     <Flex direction="column" gap={12}>
       <Flex gap={10} align="center">
@@ -36,4 +36,4 @@ const CarrerSectionSummary = ({ companyName, workingDay, summary, position }: Pr
   );
 };
 
-export default CarrerSectionSummary;
+export default CareerSectionSummary;
