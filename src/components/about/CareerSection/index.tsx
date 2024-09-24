@@ -1,6 +1,6 @@
 import React, { type PropsWithChildren } from 'react';
 import Flex from '../../common/Flex';
-import CarrerSectionSummary from './CareerSectionSummary';
+import CareerSectionSummary from './CareerSectionSummary';
 import CareerPerformance from './CareerPerformance';
 import {
   careerSectionCompanyLogoContainer,
@@ -11,7 +11,7 @@ type Props = {
   companyLogo: ImageMetadata;
 };
 
-const CarrerSectionBase = ({ children, companyLogo }: PropsWithChildren<Props>) => {
+const CareerSectionBase = ({ children, companyLogo }: PropsWithChildren<Props>) => {
   return (
     <article>
       <Flex gap={12}>
@@ -28,7 +28,7 @@ const CarrerSectionBase = ({ children, companyLogo }: PropsWithChildren<Props>) 
   );
 };
 
-export default Object.assign(CarrerSectionBase, {
-  Summary: CarrerSectionSummary,
+export default Object.assign(CareerSectionBase, {
+  Summary: CareerSectionSummary,
   Performance: CareerPerformance,
 });

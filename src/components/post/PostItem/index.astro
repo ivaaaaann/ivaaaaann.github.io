@@ -1,0 +1,51 @@
+---
+import {Image} from 'astro:assets';
+import type {Post} from '../../../models/Post';
+import {dateFormat} from '../../../utils/date';
+import Flex from '../../common/Flex';
+import Txt from '../../common/Txt';
+import {
+  postItemContainerStyle,
+  postItemTitleStyle,
+  postItemDescriptionStyle,
+  postItemTagStyle,
+  postItemContentStyle,
+  postItemThumbnailStyle,
+  postItemLayoutStyle,
+} from './index.css';
+
+type Props = {
+  post: Post;
+};
+
+const {
+  slug,
+  data: {...content},
+} = Astro.props.post;
+const {title, description, tags, pubDate, thumbnail} = content;
+---
+
+<article class={postItemContainerStyle}>
+  <a class={postItemLayoutStyle} href={`/post/${slug}`}>
+    <div class={postItemContentStyle}>
+      <h3 class={postItemTitleStyle}>{title}</h3>
+      <p class={postItemDescriptionStyle}>{description}</p>
+      <Flex align="flex-end" justify="space-between">
+        <Flex align="center" gap={10} wrap="wrap">
+          {tags.map((tag) => <span class={postItemTagStyle}>{tag}</span>)}
+        </Flex>
+        <Txt size="small" color="gray400">
+          {dateFormat(pubDate, 'yyyy. M. d')}
+        </Txt>
+      </Flex>
+    </div>
+    <Image
+      class={postItemThumbnailStyle}
+      src={thumbnail}
+      width="220"
+      height="40"
+      alt="asdad"
+      loading="lazy"
+    />
+  </a>
+</article>

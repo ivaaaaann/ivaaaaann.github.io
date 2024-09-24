@@ -14,8 +14,8 @@ import {
   aboutIntroductionRightContainerStyle,
   aboutSocialIconStyle,
 } from './index.css';
-import {QUOTALAB_CARRER, SOCIAL_GITHUB, SOCIAL_GMAIL, SOCIAL_LINKEDIN} from '../../constants';
-import AboutCarrerSection from './AboutCarrerSection';
+import {QUOTALAB_CAREER, SOCIAL_GITHUB, SOCIAL_GMAIL, SOCIAL_LINKEDIN} from '../../constants';
+import AboutCareerSection from './AboutCareerSection';
 
 const SOCIAL_LINK_ICONS_MAP: {icon: IconKey; link: string}[] = [
   {
@@ -89,7 +89,7 @@ const SOCIAL_LINK_ICONS_MAP: {icon: IconKey; link: string}[] = [
       </Flex>
       <Flex direction="column" gap={32}>
         <Txt size="xxxlarge" weight="heading" className={aboutSectionTitleStyle}>Career</Txt>
-        <AboutCarrerSection carrer={QUOTALAB_CARRER} />
+        <AboutCareerSection career={QUOTALAB_CAREER} />
       </Flex>
     </Flex>
   </Flex>

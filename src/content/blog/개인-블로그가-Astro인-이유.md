@@ -2,7 +2,7 @@
 title: '개인 블로그가 Astro인 이유'
 description: '이번에 새롭게 만든 개인블로그를 왜 Astro 프레임워크로 만들게 되었는지를 소개합니다.'
 pubDate: '2024-06-01'
-heroImage: ''
+thumbnail: 'https://ldh3907.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F939ae0c1-dc3a-4837-86c6-03a773a3f735%2Fdbef5833-3aef-4807-b3f8-bd8c07bd67af%2FUntitled.png?table=block&id=d0043f5c-b7e5-4fe2-a821-1f7480a64d45&spaceId=939ae0c1-dc3a-4837-86c6-03a773a3f735&width=1470&userId=&cache=v2'
 tags: ['Astro']
 ---
 
