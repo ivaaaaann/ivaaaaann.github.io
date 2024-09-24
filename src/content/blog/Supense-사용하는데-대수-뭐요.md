@@ -1,8 +1,8 @@
 ---
 title: 'Suspense 사용하는데, 대수.. 뭐요?'
 description: 'React에서 흔히 사용하는 Suspense, ErrorBoundary가 Algebraic Effects(대수적 효과)와 어떤 관계가 있는지 소개합니다.'
+thumbnail: https://ldh3907.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F939ae0c1-dc3a-4837-86c6-03a773a3f735%2Ff909a532-f547-4a56-b94c-7e38da490f06%2FUntitled.png?table=block&id=2636fa8b-42a5-48c9-8666-ab4ef96970a0&spaceId=939ae0c1-dc3a-4837-86c6-03a773a3f735&width=1730&userId=&cache=v2
 pubDate: '2024-06-30'
-heroImage: ''
 tags: ['React']
 ---
 
