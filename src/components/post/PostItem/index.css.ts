@@ -81,7 +81,8 @@ export const postItemThumbnailStyle = style([
     height: 'full',
   }),
   {
-    width: 220,
+    minWidth: 220,
+    maxWidth: 220,
     objectFit: 'cover',
     borderRadius: vars.radius[6],
   },
