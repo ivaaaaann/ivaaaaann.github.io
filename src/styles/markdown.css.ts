@@ -52,6 +52,7 @@ globalStyle('#markdown-container, img', {
 globalStyle('#markdown-container > blockquote', {
   borderLeft: `3px solid ${vars.color.primary}`,
   padding: '0 20px 0 20px',
+  backgroundColor: vars.color.hover,
 });
 
 globalStyle('#markdown-container > blockquote > p', {
