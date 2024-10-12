@@ -73,3 +73,18 @@ export const anchorStyle = style([
     },
   },
 ]);
+
+export const resumeAnchorStyle = style([
+  sprinkles({
+    fontFamily: 'heading',
+    textDecoration: 'none',
+  }),
+  {
+    fontSize: vars.fontSize.xlarge,
+    color: vars.color.secondary,
+    ':hover': {
+      textDecoration: 'underline',
+      cursor: 'pointer',
+    },
+  },
+]);
