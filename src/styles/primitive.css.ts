@@ -82,6 +82,7 @@ export const primitiveProperties = {
     base: fonts.base,
     light: fonts.light,
   },
+  fontSize: Object.assign({}, vars.fontSize),
   gap: space,
   paddingTop: space,
   paddingBottom: space,
