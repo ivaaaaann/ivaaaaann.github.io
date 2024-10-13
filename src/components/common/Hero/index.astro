@@ -1,15 +1,17 @@
 ---
 import {Image} from 'astro:assets';
 import {heroStyle} from './hero.css';
+import clsx from 'clsx';
 
 interface Props {
   width: number;
   height: number;
   src: string;
   alt: string;
+  className?: string;
 }
 
-const {width, height, src, alt} = Astro.props;
+const {width, height, src, alt, className} = Astro.props;
 ---
 
-<Image class={heroStyle} width={width} height={height} src={src} alt={alt} />
+<Image class={clsx(heroStyle, className)} width={width} height={height} src={src} alt={alt} />
