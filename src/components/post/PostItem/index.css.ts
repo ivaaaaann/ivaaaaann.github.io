@@ -39,7 +39,7 @@ export const postItemTitleStyle = style([
     margin: 0,
   }),
   {
-    fontSize: vars.fontSize.xxlarge,
+    fontSize: vars.fontSize.headingMedium,
   },
 ]);
 
@@ -52,7 +52,7 @@ export const postItemDescriptionStyle = style([
     overflow: 'hidden',
   }),
   {
-    fontSize: vars.fontSize.medium,
+    fontSize: vars.fontSize.contentMedium,
     lineHeight: vars.lineHeight.xxlarge,
     display: '-webkit-flex',
     textOverflow: 'ellipsis',

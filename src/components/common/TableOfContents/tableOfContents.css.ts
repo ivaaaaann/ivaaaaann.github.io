@@ -25,7 +25,7 @@ export const tableOfContentItemStyle = recipe({
     sprinkles({ paddingY: 6, paddingX: 8 }),
     {
       borderRadius: vars.radius['4'],
-      fontSize: vars.fontSize.small,
+      fontSize: vars.fontSize.captionLarge,
       ':hover': {
         backgroundColor: vars.color.hover,
       },

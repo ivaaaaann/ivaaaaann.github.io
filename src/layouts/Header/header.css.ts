@@ -37,7 +37,7 @@ export const titleWrapStyle = style([
     fontFamily: 'base',
     textDecoration: 'none',
   }),
-  { color: vars.color.base, fontSize: vars.fontSize.xxlarge },
+  { color: vars.color.base, fontSize: vars.fontSize.headingMedium },
 ]);
 
 export const titleStyle = sprinkles({
@@ -65,7 +65,7 @@ export const anchorStyle = style([
     textDecoration: 'none',
   }),
   {
-    fontSize: vars.fontSize.xlarge,
+    fontSize: vars.fontSize.headingSmall,
     color: vars.color.base,
     ':hover': {
       textDecoration: 'underline',

@@ -4,20 +4,20 @@ import { style } from '@vanilla-extract/css';
 import { sprinkles } from '../../../styles/sprinkles.css';
 import { vars } from '../../../styles/vars.css';
 import { primitiveProperties } from '../../../styles/primitive.css';
+import { getObjectKeys } from '../../../utils/functions/getObjectKeys';
 
 export const txtContainer = recipe({
   base: sprinkles({ fontFamily: 'base' }),
   variants: {
-    size: {
-      xssmall: style({ fontSize: vars.fontSize.xxsmall }),
-      xsmall: style({ fontSize: vars.fontSize.xsmall }),
-      small: style({ fontSize: vars.fontSize.small }),
-      medium: style({ fontSize: vars.fontSize.medium }),
-      large: style({ fontSize: vars.fontSize.large }),
-      xlarge: style({ fontSize: vars.fontSize.xlarge }),
-      xxlarge: style({ fontSize: vars.fontSize.xxlarge }),
-      xxxlarge: style({ fontSize: vars.fontSize.xxxlarge }),
-    },
+    size: getObjectKeys(primitiveProperties.fontSize).reduce(
+      (acc, cur) => ({
+        ...acc,
+        [cur]: style({
+          fontSize: vars.fontSize[cur],
+        }),
+      }),
+      {} as Record<keyof typeof primitiveProperties.fontSize, object>,
+    ),
     weight: {
       base: style({ fontWeight: vars.fontWeight.base }),
       heading: style({ fontWeight: vars.fontWeight.heading }),

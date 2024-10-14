@@ -1,5 +1,6 @@
 import { defineProperties } from '@vanilla-extract/sprinkles';
 import { fonts, space } from './token';
+import { vars } from './vars.css';
 
 export const primitiveProperties = {
   overflow: {
@@ -75,6 +76,7 @@ export const primitiveProperties = {
     nowrap: 'nowrap',
     'pre-wrap': 'pre-wrap',
   },
+  fontSize: Object.assign({}, vars.fontSize),
   fontFamily: {
     heading: fonts.heading,
     base: fonts.base,

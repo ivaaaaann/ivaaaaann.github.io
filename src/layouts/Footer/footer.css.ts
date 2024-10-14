@@ -28,23 +28,6 @@ export const profileDescriptionContainerStyle = sprinkles({
   paddingY: 20,
 });
 
-export const profileNameStyle = style([
-  {
-    fontSize: vars.fontSize['xxlarge'],
-    fontWeight: vars.fontWeight['heading'],
-    color: vars.color.primary,
-    fontFamily: vars.fontFamily['base'],
-  },
-]);
-
-export const profileDescriptionStyle = style({
-  fontSize: vars.fontSize['medium'],
-  fontWeight: vars.fontWeight['base'],
-  color: vars.color.base,
-  fontFamily: vars.fontFamily['light'],
-  lineHeight: vars.lineHeight['xlarge'],
-});
-
 export const footerSocialIconStyle = style({
   width: 40,
   height: 40,
@@ -56,11 +39,4 @@ export const footerSocialIconStyle = style({
   alignItems: 'center',
   justifyContent: 'center',
   ':hover': { backgroundColor: vars.color.hover },
-});
-
-export const footerCopyRightTextStyle = style({
-  fontSize: vars.fontSize['small'],
-  fontWeight: vars.fontWeight['base'],
-  color: vars.color.base,
-  fontFamily: vars.fontFamily['light'],
 });

@@ -43,9 +43,9 @@ const SOCIAL_LINK_ICONS_MAP: {icon: IconKey; link: string}[] = [
           justify="space-between"
           className={aboutIntroductionLeftContainerStyle}
         >
-          <Txt size="xxlarge" weight="heading">안녕하세요 🛫</Txt>
+          <Txt size="headingMedium" weight="heading">안녕하세요 🛫</Txt>
           <Flex direction="column" gap={16}>
-            <Txt size="large" weight="heading">
+            <Txt size="contentLarge" weight="heading">
               <bold class={aboutIntroductionHighlightStyle}>깊게 알기 위해</bold>
                고민하는 개발자, 임동현입니다
             </Txt>
@@ -88,7 +88,7 @@ const SOCIAL_LINK_ICONS_MAP: {icon: IconKey; link: string}[] = [
         </Flex>
       </Flex>
       <Flex direction="column" gap={32}>
-        <Txt size="xxxlarge" weight="heading" className={aboutSectionTitleStyle}>Career</Txt>
+        <Txt size="headingLarge" weight="heading" className={aboutSectionTitleStyle}>Career</Txt>
         <AboutCareerSection career={QUOTALAB_CAREER} />
       </Flex>
     </Flex>

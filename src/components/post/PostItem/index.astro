@@ -34,7 +34,7 @@ const {title, description, tags, pubDate, thumbnail} = content;
         <Flex align="center" gap={10} wrap="wrap">
           {tags.map((tag) => <span class={postItemTagStyle}>{tag}</span>)}
         </Flex>
-        <Txt size="small" color="gray400">
+        <Txt size="captionLarge" color="gray400">
           {dateFormat(pubDate, 'yyyy. M. d')}
         </Txt>
       </Flex>
