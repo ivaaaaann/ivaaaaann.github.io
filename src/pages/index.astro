@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PostItem from '../components/post/PostItem/index.astro';
 
 import Flex from '../components/common/Flex';
-import {heroWrapStyle, heroTitleStyle} from './index.css';
+import {heroWrapStyle, heroTitleStyle, homeHeroStyle} from './index.css';
 import {getCollection} from 'astro:content';
 import Txt from '../components/common/Txt';
 import {dateFormat} from '../utils/date';
@@ -17,7 +17,13 @@ const posts = (await getCollection('blog')).sort(
 <Layout>
   <Flex gap={48} direction="column">
     <div class={heroWrapStyle}>
-      <Hero width={900} height={250} src="/assets/mainHero.jpeg" alt="hero" />
+      <Hero
+        width={900}
+        height={250}
+        className={homeHeroStyle}
+        src="/assets/mainHero.jpeg"
+        alt="hero"
+      />
       <p class={heroTitleStyle}>
         안녕하세요, 저의 청춘을 담은 곳입니다.<br />
          즐겁게 감상해주시면 감사하겠습니다 :)

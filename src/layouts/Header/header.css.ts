@@ -80,7 +80,7 @@ export const resumeAnchorStyle = style([
     textDecoration: 'none',
   }),
   {
-    fontSize: vars.fontSize.xlarge,
+    fontSize: vars.fontSize.headingSmall,
     color: vars.color.secondary,
     ':hover': {
       textDecoration: 'underline',
