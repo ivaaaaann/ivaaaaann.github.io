@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react';
 import { txtContainer, type TxtVariants } from './index.css';
-import { cx } from '@emotion/css';
 import React from 'react';
+import clsx from 'clsx';
 
 export type TextProps = PropsWithChildren<TxtVariants> & {
   className?: string;
@@ -19,7 +19,7 @@ const Txt = ({
 }: TextProps) => {
   return (
     <div
-      className={cx(
+      className={clsx(
         txtContainer({ size, weight, whiteSpace, color, family, lineHeight }),
         className,
       )}

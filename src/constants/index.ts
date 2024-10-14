@@ -13,7 +13,7 @@ export const SITE_ABOUT_INTRODUCTION =
 export const SOCIAL_GITHUB = 'https://github.com/ivaaaaann';
 export const SOCIAL_LINKEDIN =
   'https://www.linkedin.com/in/%EB%8F%99%ED%98%84-%EC%9E%84-5ba581259/';
-export const SOCIAL_GMAIL = 'mailto:ldh165163@gmail.com';
+export const SOCIAL_GMAIL = 'ldh165163@gmail.com';
 export const SOCIAL_NOTION = 'https://ldh3907.notion.site/1fd3912a2baa4c1996d4bf2daacbb2f7';
 
 export const QUOTALAB_CAREER: Career = {

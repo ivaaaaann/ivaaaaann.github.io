@@ -6,6 +6,10 @@ export const heroWrapStyle = sprinkles({
   position: 'relative',
 });
 
+export const homeHeroStyle = style({
+  filter: 'brightness(60%)',
+});
+
 export const heroTitleStyle = style([
   sprinkles({
     fontFamily: 'base',

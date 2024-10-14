@@ -1,0 +1,26 @@
+---
+import Flex from '../../../common/Flex';
+import ResumeSection from '../../common/ResumeSection';
+import ResumeSkillGroup from '../../common/ResumeSkillGroup';
+
+const FRONTEND_LANGUAGES = ['Javascript', 'Typescript'];
+const FRONTEND_FRAMEWORKS = ['React.js', 'Next.js'];
+const FRONTEND_DATA_FETCHING_TOOLS = ['Tanstack-Query'];
+const FRONTEND_STYLING_TOOLS = ['Vanilla Extract', 'Emotion', 'Styled-Components'];
+const FRONTEND_ETC = ['Turborepo', 'Storybook', 'Changesets'];
+---
+
+<ResumeSection title="Skills">
+  <Flex direction="column" gap={24}>
+    <ResumeSkillGroup
+      groupTitle="Frontend"
+      items={[
+        FRONTEND_LANGUAGES,
+        FRONTEND_FRAMEWORKS,
+        FRONTEND_DATA_FETCHING_TOOLS,
+        FRONTEND_STYLING_TOOLS,
+        FRONTEND_ETC,
+      ].map((item) => item.join(', '))}
+    />
+  </Flex>
+</ResumeSection>

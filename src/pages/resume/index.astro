@@ -1,0 +1,67 @@
+---
+import Flex from '../../components/common/Flex';
+import {resumeContainerStyle, resumeContentContainerStyle, resumeWrapStyle} from './index.css';
+import Txt from '../../components/common/Txt';
+import {SITE_TITLE, SITE_DESCRIPTION} from '../../constants';
+import Metatags from '../../components/common/Metatags/index.astro';
+import '../../styles/globalStyle.css';
+import '../../styles/theme.css';
+import '../../styles/fonts.css';
+import ResumeAboutMeSection from '../../components/resume/components/ResumeAboutMeSection/index.astro';
+import ResumeSkillsSection from '../../components/resume/components/ResumeSkillsSection/index.astro';
+import ResumeWorkExperienceSection from '../../components/resume/components/ResumeWorkExperienceSection/index.astro';
+
+export interface Props {
+  url?: string;
+  pageTitle?: string;
+  description?: string;
+}
+
+const {pageTitle = SITE_TITLE, url = '/', description = SITE_DESCRIPTION} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <Metatags url={url} pageTitle={pageTitle} description={description} />
+    <title>{pageTitle} | Ivan's Youth</title>
+  </head>
+  <body>
+    <Flex direction="column" align="center" className={resumeContainerStyle}>
+      <Flex direction="column" className={resumeWrapStyle}>
+        <Txt size="titleXXLarge" family="heading">
+          🛫 안녕하세요, Software Engineer 임동현입니다.
+        </Txt>
+        <Flex direction="column" gap={20} className={resumeContentContainerStyle}>
+          <ResumeAboutMeSection />
+          <ResumeSkillsSection />
+          <ResumeWorkExperienceSection />
+          <div>Adasd</div>
+          <div>Adasd</div>
+        </Flex>
+      </Flex>
+    </Flex>
+  </body><!-- 
+<Layout pageTitle={'Resume'}>
+  <Flex direction="column">
+    <Flex className={resumeHeroContainerStyle}>
+      <Hero
+        width={900}
+        height={250}
+        src="https://ldh3907.notion.site/images/page-cover/gradients_3.png"
+        alt="resume-hero"
+      />
+      <span class={resumeIdentityEmojiStyle}> 🛫</span>
+    </Flex>
+    <Flex direction="column" className={resumeContentContainerStyle}>
+      <Txt size="xxxlarge" weight="heading" family="heading">
+        깊게 알기 위해 고민하는 개발자, 임동현입니다
+      </Txt>
+      <ResumeAboutSection />
+      <ResumeSkillsSection />
+      <ResumeWorkExperienceSection />
+      <ResumeEducationSection />
+    </Flex>
+  </Flex>
+</Layout> -->
+</html>

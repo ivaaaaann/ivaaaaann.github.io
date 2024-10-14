@@ -1,0 +1,44 @@
+---
+import {SOCIAL_GMAIL, SOCIAL_LINKEDIN, SOCIAL_GITHUB, SITE_URL} from '../../../../constants';
+import Divider from '../../../common/Divider';
+import Flex from '../../../common/Flex';
+import Txt from '../../../common/Txt';
+import ResumeContactItem from '../../common/ResumeContactItem';
+import ResumeSection from '../../common/ResumeSection';
+import {resumeAboutMeSectionContainerStyle, resumeAboutMeSectionPreviewBoxStyle} from './index.css';
+---
+
+<ResumeSection title="About Me">
+  <Flex gap={48} className={resumeAboutMeSectionContainerStyle}>
+    <aside class={resumeAboutMeSectionPreviewBoxStyle}>
+      <Txt size="contentMedium" lineHeight="xlarge">
+        💡 안녕하세요, 깊게 알기 위해 고민하는 2년차 Software Engineer, <strong>임동현</strong
+        >입니다.<br /><br />
+         지식의 근간을 파악하고 있는 개발자가 사용자에게 안정적인 서비스 제공할 수 있다고 생각하며,
+        따라서 깊게 알기 위해 노력합니다.<br /><br /> 주로 기술적 고민과 회고, 인생에 대한 고찰
+        정도로 글을 쓰는걸 취미로 하고 있습니다.
+      </Txt>
+    </aside>
+    <Flex direction="column" gap={16}>
+      <ResumeContactItem>
+        <ResumeContactItem.Key>Email</ResumeContactItem.Key>
+        <ResumeContactItem.Value href={`mailto:${SOCIAL_GMAIL}`}>
+          {SOCIAL_GMAIL}
+        </ResumeContactItem.Value>
+      </ResumeContactItem>
+      <ResumeContactItem>
+        <ResumeContactItem.Key>LinkedIn</ResumeContactItem.Key>
+        <ResumeContactItem.Value href={SOCIAL_LINKEDIN}>임동현(Ivan)</ResumeContactItem.Value>
+      </ResumeContactItem>
+      <ResumeContactItem>
+        <ResumeContactItem.Key>Github</ResumeContactItem.Key>
+        <ResumeContactItem.Value href={SOCIAL_GITHUB}>ivaaaaann</ResumeContactItem.Value>
+      </ResumeContactItem>
+      <Divider />
+      <ResumeContactItem>
+        <ResumeContactItem.Key>Blog</ResumeContactItem.Key>
+        <ResumeContactItem.Value href="/">{SITE_URL}</ResumeContactItem.Value>
+      </ResumeContactItem>
+    </Flex>
+  </Flex>
+</ResumeSection>
