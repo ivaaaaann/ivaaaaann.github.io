@@ -1,0 +1,36 @@
+name: Build Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - synchronize
+      - opened
+      - reopened
+      - ready_for_review
+    branches:
+      - main
+
+env:
+  CI: false
+
+jobs:
+  build:
+    name: Build Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Typecheck
+        if: always()
+        run: |
+          if git diff --name-only --diff-filter=d HEAD^1 | grep -q -E "(\.[jt]s$|\.tsx$|^yarn\.lock$|^tsconfig\.json$)"; then
+            NODE_OPTIONS=--max-old-space-size=8192 yarn run typecheck --extendedDiagnostics
+          fi
