@@ -6,35 +6,35 @@ globalStyle('#markdown-container > h1, h2, h3, h4, blockquote, aside', {
 });
 
 globalStyle('#markdown-container > h1', {
-  fontSize: vars.fontSize.xxlarge,
+  fontSize: vars.fontSize.headingMedium,
   fontWeight: vars.fontWeight.heading,
 });
 
 globalStyle('#markdown-container > h2', {
-  fontSize: vars.fontSize.xlarge,
+  fontSize: vars.fontSize.headingSmall,
   fontWeight: vars.fontWeight.heading,
 });
 
 globalStyle('#markdown-container > h3', {
-  fontSize: vars.fontSize.large,
+  fontSize: vars.fontSize.contentLarge,
   fontWeight: vars.fontWeight.heading,
 });
 
 globalStyle('#markdown-container > h4', {
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   fontWeight: vars.fontWeight.heading,
 });
 
 globalStyle('#markdown-container > p', {
   color: vars.color.base,
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   lineHeight: vars.lineHeight.xxlarge,
   margin: '10px 0 10px 0',
 });
 
 globalStyle('#markdown-container > del', {
   color: vars.color.base,
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   lineHeight: vars.lineHeight.xxlarge,
 });
 
@@ -81,19 +81,19 @@ globalStyle('#markdown-container a', {
 globalStyle(`#markdown-container > aside`, {
   backgroundColor: vars.color.hover,
   padding: '20px',
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   lineHeight: vars.lineHeight.xxlarge,
 });
 
 globalStyle(`#markdown-container > aside > dd`, {
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   lineHeight: vars.lineHeight.xxlarge,
   color: vars.color.gray400,
 });
 
 globalStyle(`#markdown-container > aside > small`, {
   display: 'block',
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   color: vars.color.gray400,
   lineHeight: vars.lineHeight.xxlarge,
   textAlign: 'right',
@@ -109,7 +109,7 @@ globalStyle(`#markdown-container table`, {
 globalStyle(`#markdown-container table > thead > tr > th `, {
   backgroundColor: vars.color.hover,
   padding: '10px',
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   lineHeight: vars.lineHeight.large,
   textAlign: 'start',
   borderLeft: `1px solid ${vars.color.white}`,
@@ -117,14 +117,14 @@ globalStyle(`#markdown-container table > thead > tr > th `, {
 
 globalStyle(`#markdown-container table tr`, {
   padding: '20px',
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   lineHeight: vars.lineHeight.large,
   borderBottom: `1px solid ${vars.color.border}`,
 });
 
 globalStyle(`#markdown-container table > tbody > tr > td`, {
   padding: '10px',
-  fontSize: vars.fontSize.medium,
+  fontSize: vars.fontSize.contentMedium,
   lineHeight: vars.lineHeight.large,
 });
 
@@ -146,6 +146,6 @@ globalStyle(`#markdown-container small`, {
   display: 'flex',
   width: '100%',
   justifyContent: 'center',
-  fontSize: vars.fontSize.small,
+  fontSize: vars.fontSize.captionLarge,
   color: vars.color.gray400,
 });

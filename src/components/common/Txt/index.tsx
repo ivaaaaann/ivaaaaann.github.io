@@ -8,7 +8,7 @@ export type TextProps = PropsWithChildren<TxtVariants> & {
 };
 
 const Txt = ({
-  size = 'medium',
+  size = 'contentMedium',
   weight = 'base',
   whiteSpace = 'normal',
   color = 'base',

@@ -14,12 +14,12 @@ const CareerPerformance = ({ title, children }: PropsWithChildren<Props>) => {
       <Convert
         value={title}
         formatter={(title) => (
-          <Txt family="base" size="medium" weight="heading">
+          <Txt family="base" size="contentMedium" weight="heading">
             {title}
           </Txt>
         )}
       />
-      <Txt size="medium" lineHeight="xxlarge">
+      <Txt size="contentMedium" lineHeight="xxlarge">
         {children}
       </Txt>
     </Flex>

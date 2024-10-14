@@ -1,6 +1,7 @@
 ---
-import {containerStyle, footerCopyRightTextStyle, footerSocialIconStyle} from './footer.css';
+import {containerStyle, footerSocialIconStyle} from './footer.css';
 import Flex from '../../components/common/Flex';
+import Txt from '../../components/common/Txt';
 import Icon, {type IconKey} from '../../components/common/Icon/index.astro';
 import {SOCIAL_GITHUB, SOCIAL_GMAIL, SOCIAL_LINKEDIN} from '../../constants';
 
@@ -31,9 +32,9 @@ const SOCIAL_LINK_ICONS_MAP: {icon: IconKey; link: string}[] = [
         ))
       }
     </Flex>
-    <span class={footerCopyRightTextStyle}
-      >© 2023 Ivan Lim Powered by
-      <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a>
-    </span>
+    <Txt size="captionLarge" weight="base" family="light">
+      © 2023 Ivan Lim Powered by
+      <a href="https://astro.build" target="_blank" rel="noopener noreferrer"> Astro</a>
+    </Txt>
   </Flex>
 </footer>

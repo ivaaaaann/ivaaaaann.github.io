@@ -16,7 +16,7 @@ export const heroTitleStyle = style([
     color: vars.color.white,
     bottom: 20,
     left: 20,
-    fontSize: vars.fontSize.large,
+    fontSize: vars.fontSize.contentLarge,
     lineHeight: vars.lineHeight.xxlarge,
   },
 ]);
