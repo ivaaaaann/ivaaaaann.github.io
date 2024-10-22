@@ -12,12 +12,12 @@ const ResumeSkillGroup = ({ groupTitle, items }: Props) => {
   return (
     <section>
       <Flex align="center" justify="space-between">
-        <Txt size="xxxlarge" family="heading">
+        <Txt size="titleSmall" family="heading">
           {groupTitle}
         </Txt>
         <Flex direction="column" gap={8} className={resumeSkillsGroupItemContainerStyle}>
           {items.map((item, idx) => (
-            <Txt size="xlarge" weight="heading" key={idx}>
+            <Txt size="headingSmall" weight="heading" key={idx}>
               <li>{item}</li>
             </Txt>
           ))}

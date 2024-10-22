@@ -1,5 +1,64 @@
 ---
 import ResumeSection from '../../common/ResumeSection';
+import {ResumeWorkExperienceItem} from '../../common/ResumeWorkExperienceItem';
 ---
 
-<ResumeSection title="Work Experience" />
+<ResumeSection title="Work Experience">
+  <ResumeWorkExperienceItem>
+    <ResumeWorkExperienceItem.Section
+      title="QuotaLab"
+      description="비상장 금융 인프라 플랫폼"
+      position="Frontend Engineer"
+      workingDay={[new Date(2023, 6, 24), null]}
+    />
+    <ResumeWorkExperienceItem.Content>
+      <ResumeWorkExperienceItem.Content.Description>
+        쿼타랩은 벤처 · 스타트업 기업, 투자자, 출자자를 연결하여 자본의 흐름을 투명하고 효율적으로
+        관리할 수 있는 비즈니스를 만들어 나가고 있습니다.
+      </ResumeWorkExperienceItem.Content.Description>
+      <ResumeWorkExperienceItem.Content.Performances
+        performances={[
+          {
+            items: ['SMB Project'],
+            children: [
+              {
+                items: [
+                  '영업보고, 동의권/협의권, 주주총회 등 스타트업과 투자자(GP) 사이에서 발생하는 번거롭고 효율적이지 못한 커뮤니케이션을 완화할 수 있는 기능을 개발하였습니다',
+                ],
+              },
+            ],
+          },
+          {
+            items: ['Crowdin 번역 플랫폼 도입'],
+          },
+          {
+            items: ['다중 동적 폼 관리'],
+          },
+          {
+            items: ['AgGrid 테이블 마이그레이션'],
+            children: [
+              {
+                items: [
+                  '기존 Antd 디자인시스템 테이블에서 Row 그룹핑, 셀 에디터 등 여러 기능을 지원하는 AgGrid 테이블로 마이그레이션',
+                ],
+              },
+            ],
+          },
+          {
+            items: ['ISO 12007을 취득을 위한 비밀번호 변경 프로세스 개발'],
+          },
+        ]}
+      />
+      <ResumeWorkExperienceItem.Content.TechStacks
+        items={[
+          'Next.js',
+          'React-Query',
+          'Emotion',
+          'Vanilla Extract',
+          'Yarn Workspace',
+          'TurboRepo',
+        ]}
+      />
+    </ResumeWorkExperienceItem.Content>
+  </ResumeWorkExperienceItem>
+</ResumeSection>

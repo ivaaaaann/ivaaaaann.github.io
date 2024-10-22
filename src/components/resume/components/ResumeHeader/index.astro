@@ -1,0 +1,30 @@
+---
+import Flex from '../../../common/Flex';
+import Txt from '../../../common/Txt';
+import {
+  resumeHeaderAnchorStyle,
+  resumeHeaderContainerStyle,
+  resumeHeaderNavStyle,
+  resumeHeaderTitleBoldTextStyle,
+} from './index.css';
+---
+
+<header class={resumeHeaderContainerStyle}>
+  <nav class={resumeHeaderNavStyle}>
+    <h1>
+      <a href="/resume">
+        <Flex>
+          <Txt size="headingMedium">Ivan's</Txt>
+          <Txt size="headingMedium" family="heading" className={resumeHeaderTitleBoldTextStyle}>
+            Resume
+          </Txt>
+        </Flex>
+      </a>
+    </h1>
+    <Flex align="center" gap={12}>
+      <a href="/">
+        <Txt family="heading" size="headingSmall" className={resumeHeaderAnchorStyle}>Blog</Txt>
+      </a>
+    </Flex>
+  </nav>
+</header>
