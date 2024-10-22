@@ -17,10 +17,10 @@ const ResumeContactItemBase = ({ children }: PropsWithChildren) => {
 const ResumeContactItemKey = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <Txt size="large" family="heading" className={resumeContactItemKeyStyle}>
+      <Txt size="contentLarge" family="heading" className={resumeContactItemKeyStyle}>
         {children}
       </Txt>
-      <Txt size="large" family="heading">
+      <Txt size="contentLarge" family="heading">
         |
       </Txt>
     </>
@@ -35,7 +35,7 @@ const ResumeContactItemValue = ({ children, href }: ValueProps) => {
   return (
     <a href={href}>
       <Txt
-        size="large"
+        size="contentLarge"
         family="heading"
         className={convert(href, () => resumeContactItemKeyLinkStyle)}
       >

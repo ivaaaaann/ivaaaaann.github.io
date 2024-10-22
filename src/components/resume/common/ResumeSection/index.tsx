@@ -12,8 +12,13 @@ type Props = PropsWithChildren<{
 const ResumeSection = ({ title, children }: Props) => {
   return (
     <section className={resumeSectionContainerStyle}>
-      <Flex direction="column" gap={12}>
-        <Txt size="xxxxlarge" weight="heading" family="heading" className={resumeSectionTitleStyle}>
+      <Flex direction="column" gap={24}>
+        <Txt
+          size="titleLarge"
+          weight="heading"
+          family="heading"
+          className={resumeSectionTitleStyle}
+        >
           {title}
         </Txt>
         {children}
