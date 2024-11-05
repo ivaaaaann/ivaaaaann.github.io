@@ -25,8 +25,11 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Install Yarn (Latest Version)
-        run: npm install -g yarn@latest
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Prepare Yarn version
+        run: corepack prepare yarn@4.5.1 --activate
 
       - name: Verify Yarn Version
         run: yarn --version
