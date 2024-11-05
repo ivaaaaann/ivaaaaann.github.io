@@ -25,6 +25,12 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Install Yarn (Latest Version)
+        run: npm install -g yarn@latest
+
+      - name: Verify Yarn Version
+        run: yarn --version
+
       - name: Install Dependencies
         run: yarn install
 
