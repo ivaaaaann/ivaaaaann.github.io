@@ -6,8 +6,6 @@ pubDate: '2024-06-30'
 tags: ['React']
 ---
 
-# Suspense를 사용하는데, 대수.. 뭐요?
-
 해당 글은 React의 창시자, [Dan Abramov](https://github.com/gaearon)의 [Algebraic Effects for the Rest of Us](https://overreacted.io/algebraic-effects-for-the-rest-of-us/) 를 읽고 내가 이해한 바를 설명하는 글이다. 개인적인 개념정리, 생각정리를 위해 작성한 글이라, 주관적인 견해가 섞여있으니 참고해주시길 바란다.
 
 ![Untitled](https://ldh3907.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F939ae0c1-dc3a-4837-86c6-03a773a3f735%2Ff909a532-f547-4a56-b94c-7e38da490f06%2FUntitled.png?table=block&id=2636fa8b-42a5-48c9-8666-ab4ef96970a0&spaceId=939ae0c1-dc3a-4837-86c6-03a773a3f735&width=1730&userId=&cache=v2)

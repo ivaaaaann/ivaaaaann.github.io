@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build --remote",
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "tsc --noEmit --skipLibCheck true"
   },
   "dependencies": {
+    "@astrojs/db": "^0.14.3",
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/react": "^3.6.2",
     "@astrojs/rss": "^4.0.9",

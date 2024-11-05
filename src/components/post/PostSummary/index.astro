@@ -1,0 +1,44 @@
+---
+import type {Post} from '../../../models/Post';
+import Flex from '../../common/Flex';
+import Txt from '../../common/Txt';
+import Icon from '../../common/Icon/index.astro';
+import {dateFormat} from '../../../utils/date';
+import {postSummaryContainerStyle} from './index.css';
+import {formatToAbbreviation} from '../../../utils/formatter/formatToAbbreviation';
+
+type Props = {
+  post: Post;
+  viewCount: number;
+};
+
+const {
+  post: {
+    data: {...content},
+  },
+  viewCount,
+} = Astro.props;
+
+const {title, pubDate, thumbnail} = content;
+---
+
+<Flex direction="column" gap={20}>
+  <Flex align="center" justify="space-between">
+    <Txt size="headingMedium" weight="heading">
+      <h1>{title}</h1>
+    </Txt>
+    <Flex align="center" gap={4} className={postSummaryContainerStyle}>
+      <Txt color="gray400" size="captionLarge">
+        {dateFormat(pubDate, 'yyyy. M. d')}
+      </Txt>
+      <Txt color="gray400" size="contentSmall">|</Txt>
+      <Flex align="center" gap={4}>
+        <Icon name="eye" size={18} />
+        <Txt color="gray400" size="captionLarge">
+          {formatToAbbreviation(viewCount)}
+        </Txt>
+      </Flex>
+    </Flex>
+  </Flex>
+  <img src={thumbnail} alt={title} />
+</Flex>
