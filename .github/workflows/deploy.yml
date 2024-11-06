@@ -14,6 +14,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Enable Corepack
+        run: corepack enable
+      - name: Prepare Yarn version
+        run: corepack prepare yarn@4.5.1 --activate
       - name: Checkout your repository using git
         uses: actions/checkout@v3
       - name: Install, build, and upload your site
