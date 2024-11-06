@@ -2,7 +2,11 @@
 import {type CollectionEntry, getCollection} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import {GET} from '../api/views';
-import PostContent from './PostContent.astro';
+import TableOfContents from '../../components/common/TableOfContents';
+import {convert} from '../../utils/functions/convert';
+import {sectionContainerStyle, contentContainerStyle} from './index.css';
+import PostSummary from '../../components/post/PostSummary/index.astro';
+import PostContentWrapper from './PostContentWrapper.astro';
 
 export const getStaticPaths = async () => {
   const posts = await getCollection('blog');
@@ -17,6 +21,8 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 
+const {Content} = await post.render();
+
 const viewCountResponse = await GET({
   ...Astro,
   params: {
@@ -28,5 +34,19 @@ const viewCountData = await viewCountResponse.json();
 ---
 
 <Layout pageTitle={post.data.title}>
-  <PostContent post={post} viewCount={viewCountData.data.count ?? 0} />
+  <PostContentWrapper>
+    <section class={sectionContainerStyle}>
+      <article id="markdown-container" class={contentContainerStyle}>
+        <PostSummary post={post} viewCount={viewCountData.data.count ?? 0} />
+        <Content />
+      </article>
+      {
+        convert(Content, (Content) => (
+          <TableOfContents>
+            <Content />
+          </TableOfContents>
+        ))
+      }
+    </section>
+  </PostContentWrapper>
 </Layout>
