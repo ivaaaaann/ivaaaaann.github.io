@@ -37,8 +37,8 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-      - name: Build
-        run: yarn build
+      - name: Generate Astro content types
+        run: yarn astro sync
 
       - name: Typecheck
         if: always()
