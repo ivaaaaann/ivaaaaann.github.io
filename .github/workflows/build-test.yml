@@ -37,8 +37,8 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-      - name: Astro DB Seup
-        run: yarn dev
+      - name: Build
+        run: yarn build
 
       - name: Typecheck
         if: always()
