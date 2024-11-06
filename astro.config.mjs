@@ -5,10 +5,12 @@ import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import remakToc from 'remark-toc';
 
+import db from '@astrojs/db';
+
 export default defineConfig({
   site: 'https://ivaaaaann.github.io',
   base: '/',
-  integrations: [react(), mdx(), sitemap()],
+  integrations: [react(), mdx(), sitemap(), db()],
   vite: {
     plugins: [vanillaExtractPlugin()],
   },

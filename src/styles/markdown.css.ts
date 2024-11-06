@@ -61,8 +61,8 @@ globalStyle('#markdown-container > blockquote > p', {
 
 globalStyle('#markdown-container > p > code', {
   backgroundColor: vars.color.blue100,
-  fontWeight: vars.fontWeight.heading,
-  padding: 2,
+  fontSize: vars.fontSize.contentMedium,
+  lineHeight: vars.lineHeight.xxlarge,
   borderRadius: vars.radius[4],
 });
 

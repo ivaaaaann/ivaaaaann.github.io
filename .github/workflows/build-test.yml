@@ -25,8 +25,20 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Prepare Yarn version
+        run: corepack prepare yarn@4.5.1 --activate
+
+      - name: Verify Yarn Version
+        run: yarn --version
+
       - name: Install Dependencies
         run: yarn install
+
+      - name: Generate Astro content types
+        run: yarn astro sync
 
       - name: Typecheck
         if: always()

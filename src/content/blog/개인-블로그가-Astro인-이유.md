@@ -6,12 +6,7 @@ thumbnail: 'https://ldh3907.notion.site/image/https%3A%2F%2Fprod-files-secure.s3
 tags: ['Astro']
 ---
 
-# 개인 블로그가 아스트로인 이유
-
 개인적으로 공부한 내용을 기록하거나, 평소 고민 같은걸 끄적이기 위해서 저장소? 같은 것이 필요했다. 티스토리나 브랜치같은 블로그 플랫폼을 사용하면 되지만, 마침 개인 시간에 여유도 있고 개발자로서 자존심이 상하기에 새로운 기술도 배울 겸 직접 만들어보았다.
-
-![Untitled](https://ldh3907.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F939ae0c1-dc3a-4837-86c6-03a773a3f735%2Fdbef5833-3aef-4807-b3f8-bd8c07bd67af%2FUntitled.png?table=block&id=d0043f5c-b7e5-4fe2-a821-1f7480a64d45&spaceId=939ae0c1-dc3a-4837-86c6-03a773a3f735&width=1470&userId=&cache=v2)
-<small>( 가오에 살고 가오에 죽는다.. )</small>
 
 ## Astro 프레임워크
 
