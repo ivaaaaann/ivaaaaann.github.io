@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/common/Hero/index.astro';
 import PostItem from '../components/post/PostItem/index.astro';
 
 import Flex from '../components/common/Flex';
@@ -8,6 +7,7 @@ import {heroWrapStyle, heroTitleStyle} from './index.css';
 import {getCollection} from 'astro:content';
 import Txt from '../components/common/Txt';
 import {dateFormat} from '../utils/date';
+import Hero from '../components/common/Hero';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -23,10 +23,8 @@ const posts = (await getCollection('blog')).sort(
          즐겁게 감상해주시면 감사하겠습니다 :)
       </p>
     </div>
-    <section>
-      <Flex direction="column" gap={40}>
-        {posts.map((post) => <PostItem post={post} />)}
-      </Flex>
-    </section>
+    <Flex as="section" direction="column" gap={40}>
+      {posts.map((post) => <PostItem post={post} />)}
+    </Flex>
   </Flex>
 </Layout>
