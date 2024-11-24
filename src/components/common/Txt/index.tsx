@@ -1,32 +1,52 @@
-import type { PropsWithChildren } from 'react';
+import type { ElementType, Ref } from 'react';
 import { txtContainer, type TxtVariants } from './index.css';
 import { cx } from '@emotion/css';
-import React from 'react';
+import React, { forwardRef } from 'react';
+import type { PolymorphicComponentProps } from '../system/polymorphic';
 
-export type TextProps = PropsWithChildren<TxtVariants> & {
+const DEFAULT_ELEMENT = 'span';
+
+export type TxtOwnProps = TxtVariants & {
   className?: string;
 };
 
-const Txt = ({
-  size = 'contentMedium',
-  weight = 'base',
-  whiteSpace = 'normal',
-  color = 'base',
-  family,
-  children,
-  className,
-  lineHeight,
-}: TextProps) => {
-  return (
-    <div
-      className={cx(
-        txtContainer({ size, weight, whiteSpace, color, family, lineHeight }),
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
-};
+export type TxtProps<Element extends ElementType> = PolymorphicComponentProps<Element, TxtOwnProps>;
+
+type TxtComponent = <Element extends ElementType = typeof DEFAULT_ELEMENT>(
+  props: TxtProps<Element>,
+) => React.ReactNode;
+
+const Txt: TxtComponent = forwardRef(
+  <Element extends ElementType = typeof DEFAULT_ELEMENT>(
+    {
+      as,
+      size = 'contentMedium',
+      weight = 'base',
+      whiteSpace = 'normal',
+      color = 'base',
+      family,
+      children,
+      className,
+      lineHeight,
+      ...restProps
+    }: TxtProps<Element>,
+    ref: Ref<HTMLSpanElement>,
+  ) => {
+    const Element = as ?? DEFAULT_ELEMENT;
+
+    return (
+      <Element
+        ref={ref}
+        className={cx(
+          txtContainer({ size, weight, whiteSpace, color, family, lineHeight }),
+          className,
+        )}
+        {...restProps}
+      >
+        {children}
+      </Element>
+    );
+  },
+);
 
 export default Txt;

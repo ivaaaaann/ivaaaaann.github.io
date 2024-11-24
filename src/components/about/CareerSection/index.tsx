@@ -13,18 +13,16 @@ type Props = {
 
 const CareerSectionBase = ({ children, companyLogo }: PropsWithChildren<Props>) => {
   return (
-    <article>
-      <Flex gap={12}>
-        <Flex justify="center" align="center" className={careerSectionCompanyLogoContainer}>
-          <img
-            src={companyLogo.src}
-            alt="company logo"
-            className={careerSectionCompanyLogoImageContainer}
-          />
-        </Flex>
-        <Flex direction="column">{children}</Flex>
+    <Flex as="article" gap={12}>
+      <Flex justify="center" align="center" className={careerSectionCompanyLogoContainer}>
+        <img
+          src={companyLogo.src}
+          alt="company logo"
+          className={careerSectionCompanyLogoImageContainer}
+        />
       </Flex>
-    </article>
+      <Flex direction="column">{children}</Flex>
+    </Flex>
   );
 };
 
