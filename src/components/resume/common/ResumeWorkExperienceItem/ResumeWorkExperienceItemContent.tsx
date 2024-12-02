@@ -6,7 +6,8 @@ import { css } from '@emotion/css';
 import {
   resumeWorkExperienceItemDescriptionContainer,
   resumeWorkExperienceItemPerformanceContainer,
-  resumeWorkExperienceItemPerformanceContainerGap,
+  resumeWorkExperienceItemPerformanceItemContainer,
+  resumeWorkExperienceItemPerformanceItemContainerGap,
   resumeWorkExperienceItemTechStackContainer,
   resumeWorkExperienceItemTechStackLabel,
 } from './index.css';
@@ -38,9 +39,9 @@ const Performances = ({ performances }: PerformanceProps) => {
       return (
         <ul>
           <div
-            className={resumeWorkExperienceItemPerformanceContainer}
+            className={resumeWorkExperienceItemPerformanceItemContainer}
             style={assignInlineVars({
-              [resumeWorkExperienceItemPerformanceContainerGap]: `${convertedDepth * 20}px`,
+              [resumeWorkExperienceItemPerformanceItemContainerGap]: `${convertedDepth * 20}px`,
             })}
           >
             <Txt lineHeight="xlarge">
@@ -56,7 +57,7 @@ const Performances = ({ performances }: PerformanceProps) => {
   };
 
   return (
-    <Flex direction="column" gap={8}>
+    <Flex direction="column" gap={8} className={resumeWorkExperienceItemPerformanceContainer}>
       {getPerformaces(performances)}
     </Flex>
   );

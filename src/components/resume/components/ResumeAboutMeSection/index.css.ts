@@ -11,10 +11,10 @@ export const resumeAboutMeSectionContainerStyle = style([
 export const resumeAboutMeSectionPreviewBoxStyle = style([
   sprinkles({
     width: 'full',
-    padding: 20,
+    padding: 24,
   }),
   {
-    backgroundColor: vars.color.hover,
+    backgroundColor: '#252525',
     borderRadius: vars.radius[4],
   },
 ]);

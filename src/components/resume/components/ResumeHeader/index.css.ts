@@ -8,11 +8,9 @@ export const resumeHeaderContainerStyle = style([
     width: 'full',
     display: 'flex',
     justifyContent: 'center',
-    position: 'fixed',
   }),
   {
     height: 95,
-    backgroundColor: vars.color.background,
     opacity: 0.85,
     top: 0,
     left: 0,
@@ -37,7 +35,7 @@ export const resumeHeaderTitleBoldTextStyle = style({
 });
 
 export const resumeHeaderAnchorStyle = style({
-  color: vars.color.primary,
+  color: vars.color.white,
   ':hover': {
     textDecoration: 'underline',
     cursor: 'pointer',

@@ -10,16 +10,20 @@ export const resumeWorkExperienceItemDescriptionContainer = sprinkles({
   paddingY: 8,
 });
 
-export const resumeWorkExperienceItemPerformanceContainerGap = createVar();
+export const resumeWorkExperienceItemPerformanceContainer = sprinkles({
+  paddingX: 20,
+});
 
-export const resumeWorkExperienceItemPerformanceContainer = style([
+export const resumeWorkExperienceItemPerformanceItemContainerGap = createVar();
+
+export const resumeWorkExperienceItemPerformanceItemContainer = style([
   sprinkles({
     display: 'flex',
     flexDirection: 'column',
     gap: 8,
   }),
   style({
-    marginLeft: resumeWorkExperienceItemPerformanceContainerGap,
+    marginLeft: resumeWorkExperienceItemPerformanceItemContainerGap,
   }),
 ]);
 

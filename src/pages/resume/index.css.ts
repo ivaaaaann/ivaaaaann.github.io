@@ -5,7 +5,7 @@ import { vars } from '../../styles/vars.css';
 
 export const resumeContainerStyle = style({
   minHeight: '100vh',
-  backgroundColor: vars.color.background,
+  backgroundColor: '#191919',
 });
 
 export const resumeWrapStyle = style([
@@ -14,7 +14,6 @@ export const resumeWrapStyle = style([
     flexDirection: 'column',
   }),
   {
-    paddingTop: 95,
     width: breakPoints['desktop'],
   },
 ]);

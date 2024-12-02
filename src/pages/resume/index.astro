@@ -27,12 +27,12 @@ const {pageTitle = SITE_TITLE, url = '/', description = SITE_DESCRIPTION} = Astr
     <Metatags url={url} pageTitle={pageTitle} description={description} />
     <title>{pageTitle} | Ivan's Youth</title>
   </head>
-  <body>
-    <Flex direction="column" align="center" className={resumeContainerStyle}>
+  <body class={resumeContainerStyle}>
+    <Flex direction="column" align="center">
       <Flex direction="column" className={resumeWrapStyle}>
         <ResumeHeader />
-        <Txt size="titleXXLarge" family="heading">
-          🛫 안녕하세요, Software Engineer 임동현입니다.
+        <Txt size="titleXLarge" family="heading" color="gray200">
+          🛫 안녕하세요, 소프트웨어 엔지니어 임동현입니다.
         </Txt>
         <Flex direction="column" gap={20} className={resumeContentContainerStyle}>
           <ResumeAboutMeSection />
