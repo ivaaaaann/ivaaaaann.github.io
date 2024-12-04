@@ -23,11 +23,6 @@ const Header = () => {
         </h1>
         <Flex align="center" gap={12}>
           <div className={anchorWrapStyle}>
-            <a href="/about" className={anchorStyle}>
-              About
-            </a>
-          </div>
-          <div className={anchorWrapStyle}>
             <a href="/resume" className={resumeAnchorStyle}>
               Resume
             </a>
