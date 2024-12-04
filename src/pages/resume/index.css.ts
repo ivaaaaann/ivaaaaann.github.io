@@ -1,11 +1,11 @@
 import { style } from '@vanilla-extract/css';
 import { sprinkles } from '../../styles/sprinkles.css';
 import { breakPoints } from '../../styles/token';
-import { vars } from '../../styles/vars.css';
 
 export const resumeContainerStyle = style({
   minHeight: '100vh',
   backgroundColor: '#191919',
+  paddingBottom: 60,
 });
 
 export const resumeWrapStyle = style([

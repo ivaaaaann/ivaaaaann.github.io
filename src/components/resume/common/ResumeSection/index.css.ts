@@ -9,3 +9,7 @@ export const resumeSectionContainerStyle = sprinkles({
 export const resumeSectionTitleStyle = style({
   color: color.secondary,
 });
+
+export const resumeSectionDividerStyle = style({
+  color: '#ffffff21',
+});

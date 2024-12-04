@@ -1,26 +1,59 @@
 ---
 import Flex from '../../../common/Flex';
 import ResumeSection from '../../common/ResumeSection';
-import ResumeSkillGroup from '../../common/ResumeSkillGroup';
+import {ResumeSkillItem} from '../../common/ResumeSkillItem';
 
 const FRONTEND_LANGUAGES = ['Javascript', 'Typescript'];
 const FRONTEND_FRAMEWORKS = ['React.js', 'Next.js'];
+const FRONTEND_TEST_TOOLS = ['Jest', 'Vitest'];
 const FRONTEND_DATA_FETCHING_TOOLS = ['Tanstack-Query'];
 const FRONTEND_STYLING_TOOLS = ['Vanilla Extract', 'Emotion', 'Styled-Components'];
 const FRONTEND_ETC = ['Turborepo', 'Storybook', 'Changesets'];
 ---
 
 <ResumeSection title="Skills">
-  <Flex direction="column" gap={24}>
-    <ResumeSkillGroup
-      groupTitle="Frontend"
-      items={[
-        FRONTEND_LANGUAGES,
-        FRONTEND_FRAMEWORKS,
-        FRONTEND_DATA_FETCHING_TOOLS,
-        FRONTEND_STYLING_TOOLS,
-        FRONTEND_ETC,
-      ].map((item) => item.join(', '))}
-    />
+  <Flex direction="column" gap={64}>
+    <ResumeSkillItem>
+      <ResumeSkillItem.Section title="Frontend" />
+      <ResumeSkillItem.Content>
+        <ResumeSkillItem.Group
+          items={[
+            FRONTEND_LANGUAGES,
+            FRONTEND_FRAMEWORKS,
+            FRONTEND_TEST_TOOLS,
+            FRONTEND_DATA_FETCHING_TOOLS,
+            FRONTEND_STYLING_TOOLS,
+            FRONTEND_ETC,
+          ]}
+        />
+        <ResumeSkillItem.Principal
+          title="Typescript"
+          descriptions={[
+            '타입들의 패턴을 파악하여 일반화하는 것을 좋아합니다.',
+            '유연하고 확장성있는 제네릭을 사용해서 설계하는 것을 좋아합니다.',
+          ]}
+        />
+        <ResumeSkillItem.Principal
+          title="React"
+          descriptions={[
+            '목적과 관심사가 확실한 컴포넌트를 설계하는 것을 좋아합니다.',
+            '여러 컴포넌트 디자인 패턴을 활용하여 위 목적을 달성하기 위해 노력합니다.',
+          ]}
+        />
+      </ResumeSkillItem.Content>
+    </ResumeSkillItem>
+    <ResumeSkillItem>
+      <ResumeSkillItem.Section title="Other" />
+      <ResumeSkillItem.Content>
+        <ResumeSkillItem.Principal
+          title="Communication"
+          descriptions={[
+            '문제가 발생했을 때, 누가 문제를 발생시켰는지가 아닌 어떻게 빨리 해결할 수 있을지에 집중합니다.',
+            '한정된 리소스에서 모든걸 해볼 수는 없기에, 우선순위를 기반으로 일하는걸 지향합니다.',
+            '자기객관화를 통해 항상 배우려는 자세를 유지하려고 노력합니다.',
+          ]}
+        />
+      </ResumeSkillItem.Content>
+    </ResumeSkillItem>
   </Flex>
 </ResumeSection>
