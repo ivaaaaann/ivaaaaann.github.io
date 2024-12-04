@@ -6,7 +6,6 @@ import {
   titleStyle,
   boldTitleStyle,
   anchorWrapStyle,
-  anchorStyle,
   resumeAnchorStyle,
 } from './header.css';
 import Flex from '../../components/common/Flex';
