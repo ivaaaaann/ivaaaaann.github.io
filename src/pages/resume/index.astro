@@ -4,9 +4,6 @@ import {resumeContainerStyle, resumeContentContainerStyle, resumeWrapStyle} from
 import Txt from '../../components/common/Txt';
 import {SITE_TITLE, SITE_DESCRIPTION} from '../../constants';
 import Metatags from '../../components/common/Metatags/index.astro';
-import '../../styles/globalStyle.css';
-import '../../styles/theme.css';
-import '../../styles/fonts.css';
 import ResumeHeader from '../../components/resume/components/ResumeHeader/index.astro';
 import ResumeAboutMeSection from '../../components/resume/components/ResumeAboutMeSection/index.astro';
 import ResumeSkillsSection from '../../components/resume/components/ResumeSkillsSection/index.astro';
@@ -14,6 +11,9 @@ import ResumeWorkExperienceSection from '../../components/resume/components/Resu
 import ResumeOtherExperienceSection from '../../components/resume/components/ResumeOtherExperienceSection/index.astro';
 import ResumeContactsSection from '../../components/resume/components/ResumeContactsSection/index.astro';
 import ResumeEducationSection from '../../components/resume/components/ResumeEducationSection/index.astro';
+import '../../styles/globalStyle.css';
+import '../../styles/theme.css';
+import '../../styles/fonts.css';
 
 export interface Props {
   url?: string;
@@ -28,7 +28,7 @@ const {pageTitle = SITE_TITLE, url = '/', description = SITE_DESCRIPTION} = Astr
 <html lang="ko">
   <head>
     <Metatags url={url} pageTitle={pageTitle} description={description} />
-    <title>{pageTitle} | Ivan's Youth</title>
+    <title>{pageTitle} | Ivan's Resume</title>
   </head>
   <body class={resumeContainerStyle}>
     <Flex direction="column" align="center">
