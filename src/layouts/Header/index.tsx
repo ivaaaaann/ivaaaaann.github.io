@@ -7,7 +7,9 @@ import {
   boldTitleStyle,
   anchorWrapStyle,
   anchorStyle,
+  resumeAnchorStyle,
 } from './header.css';
+import Flex from '../../components/common/Flex';
 
 const Header = () => {
   return (
@@ -19,11 +21,13 @@ const Header = () => {
             <span className={boldTitleStyle}>Youth</span>
           </a>
         </h1>
-        <div className={anchorWrapStyle}>
-          <a href="/about" className={anchorStyle}>
-            About
-          </a>
-        </div>
+        <Flex align="center" gap={12}>
+          <div className={anchorWrapStyle}>
+            <a href="/resume" className={resumeAnchorStyle}>
+              Resume
+            </a>
+          </div>
+        </Flex>
       </nav>
     </header>
   );

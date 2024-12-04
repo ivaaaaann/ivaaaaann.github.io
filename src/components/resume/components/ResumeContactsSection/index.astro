@@ -1,0 +1,28 @@
+---
+import {SITE_HOST, SOCIAL_GITHUB, SOCIAL_GMAIL} from '../../../../constants';
+import Flex from '../../../common/Flex';
+import ResumeContactItem from '../../common/ResumeContactItem';
+import ResumeSection from '../../common/ResumeSection';
+import {resumeContactsSectionContainerStyle} from './index.css';
+---
+
+<ResumeSection title="Contacts" hideDivider>
+  <Flex direction="column" gap={20} className={resumeContactsSectionContainerStyle}>
+    <ResumeContactItem>
+      <ResumeContactItem.Key>Email</ResumeContactItem.Key>
+      <ResumeContactItem.Value>{SOCIAL_GMAIL}</ResumeContactItem.Value>
+    </ResumeContactItem>
+    <ResumeContactItem>
+      <ResumeContactItem.Key>Phone</ResumeContactItem.Key>
+      <ResumeContactItem.Value>010-2797-3907</ResumeContactItem.Value>
+    </ResumeContactItem>
+    <ResumeContactItem>
+      <ResumeContactItem.Key>Github</ResumeContactItem.Key>
+      <ResumeContactItem.Value href={SOCIAL_GITHUB}>ivaaaaann</ResumeContactItem.Value>
+    </ResumeContactItem>
+    <ResumeContactItem>
+      <ResumeContactItem.Key>Blog</ResumeContactItem.Key>
+      <ResumeContactItem.Value href="/">{SITE_HOST}</ResumeContactItem.Value>
+    </ResumeContactItem>
+  </Flex>
+</ResumeSection>

@@ -1,8 +1,8 @@
 import type { ElementType, Ref } from 'react';
 import { txtContainer, type TxtVariants } from './index.css';
-import { cx } from '@emotion/css';
 import React, { forwardRef } from 'react';
 import type { PolymorphicComponentProps } from '../system/polymorphic';
+import clsx from 'clsx';
 
 const DEFAULT_ELEMENT = 'span';
 
@@ -37,7 +37,7 @@ const Txt: TxtComponent = forwardRef(
     return (
       <Element
         ref={ref}
-        className={cx(
+        className={clsx(
           txtContainer({ size, weight, whiteSpace, color, family, lineHeight }),
           className,
         )}

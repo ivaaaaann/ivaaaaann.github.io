@@ -10,6 +10,7 @@ export const color = {
   base: '#3a3d40',
   border: '#d1d1d1',
   primary: '#003853',
+  secondary: '#5e87c9',
   hover: '#f5f5f5',
   focus: '#c45a8d',
   red50: '#ffebee',

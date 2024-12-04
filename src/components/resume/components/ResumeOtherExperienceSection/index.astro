@@ -1,0 +1,81 @@
+---
+import Flex from '../../../common/Flex';
+import ResumeSection from '../../common/ResumeSection';
+import {ResumeWorkExperienceItem} from '../../common/ResumeWorkExperienceItem';
+import {resumeOtherExperienceContainerStyle} from './index.css';
+---
+
+<ResumeSection title="Other Experience">
+  <Flex direction="column" gap={64} className={resumeOtherExperienceContainerStyle}>
+    <ResumeWorkExperienceItem>
+      <ResumeWorkExperienceItem.Section
+        title="Ivan's Youth"
+        description="개인 블로그"
+        workingDay={[new Date(2023, 8, 1), null]}
+        link="/"
+        linkName="ivaaaaann.github.io"
+      />
+      <ResumeWorkExperienceItem.Content>
+        <ResumeWorkExperienceItem.Group>
+          <ResumeWorkExperienceItem.Group.Overview
+            descriptions={[
+              '일상적인 회고나 개발 및 인생에 대한 고찰을 기록하기 위해 Astro 프레임워크를 사용하여 개인 블로그를 제작하였습니다.',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.KeyPoints
+            keyPoints={[
+              'Polymorphic 컴포넌트 개념을 적용해 시맨틱 마크업에 유리한 구조 구성',
+              'Light house 기준 검색엔진 최적화 점수 100점 달성',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.TechStack
+            techStack={['Typescript', 'Astro', 'React', 'Vanilla Extract', 'Github Pages']}
+          />
+        </ResumeWorkExperienceItem.Group>
+        <ResumeWorkExperienceItem.Divider />
+      </ResumeWorkExperienceItem.Content>
+    </ResumeWorkExperienceItem>
+    <ResumeWorkExperienceItem>
+      <ResumeWorkExperienceItem.Section
+        title="Team-B1nd"
+        description="대구소프트웨어마이스터고등학교 스마트스쿨 플랫폼 운영 동아리"
+        workingDay={[new Date(2023, 8, 1), null]}
+        link="https://b1nd.com/#/service_intro"
+        linkName="b1nd.com"
+      />
+      <ResumeWorkExperienceItem.Content>
+        <ResumeWorkExperienceItem.Description>
+          Team-B1nd는 교내 스마트스쿨 플랫폼 도담도담을 운영하고 직접 유지보수하는 개발동아리
+          입니다.
+        </ResumeWorkExperienceItem.Description>
+        <ResumeWorkExperienceItem.Group>
+          <ResumeWorkExperienceItem.Group.Overview
+            title="Frontend Chapter"
+            descriptions={[
+              '프론트엔드 챕터의 일원으로서 스마트스쿨 플랫폼 도담도담을 유지보수하고, 팀내 기술 부채 해소와 DX 향상을 위해 다양한 활동에 적극 참여했습니다.',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.KeyPoints
+            keyPoints={[
+              '도담도담 학생 일정, 분실물/습득물, 채용공고 페이지 UI 신규 개발',
+              '도담도담 티쳐 일정 관리, 채용공고 관리 페이지 UI 신규 개발',
+              'Typescript 도입을 통해 도담도담 프로젝트 타입 시스템 커버리지 90% 달성',
+              'Esbuild 번들러 도입을 통해 프로젝트 빌드시간 9.56초 → 3.57초로 대폭 개선',
+              '팀내 UI Kit Form-B1nding 개발',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.TechStack
+            techStack={[
+              'Typescript',
+              'React',
+              'Tanstack-Query',
+              'Styled-components',
+              'Yarn Berry',
+              'Changesets',
+            ]}
+          />
+        </ResumeWorkExperienceItem.Group>
+      </ResumeWorkExperienceItem.Content>
+    </ResumeWorkExperienceItem>
+  </Flex>
+</ResumeSection>

@@ -1,0 +1,29 @@
+---
+import Flex from '../../../common/Flex';
+import Txt from '../../../common/Txt';
+import ResumeSection from '../../common/ResumeSection';
+import {ResumeWorkExperienceItem} from '../../common/ResumeWorkExperienceItem';
+import {resumeEducationSectionontainerStyle} from './index.css';
+---
+
+<ResumeSection title="Education">
+  <Flex direction="column" className={resumeEducationSectionontainerStyle}>
+    <ResumeWorkExperienceItem>
+      <ResumeWorkExperienceItem.Section
+        title="대구소프트웨어마이스터고등학교"
+        accent={false}
+        workingDay={[new Date(2021, 2, 1), new Date(2024, 0, 1)]}
+      />
+      <ResumeWorkExperienceItem.Content>
+        <ResumeWorkExperienceItem.Group>
+          <ResumeWorkExperienceItem.Group.Overview
+            title="소프트웨어개발과"
+            descriptions={[
+              '설계, 구현, 일정 산정, 결함 식별 등 소프트웨어 개발의 기초 이론을 학습하며 개발 프로세스 전반에 대한 기초적인 이해를 높였습니다. 이를 통해 문제 해결 역량과 기초 개발 역량을 쌓았습니다.',
+            ]}
+          />
+        </ResumeWorkExperienceItem.Group>
+      </ResumeWorkExperienceItem.Content>
+    </ResumeWorkExperienceItem>
+  </Flex>
+</ResumeSection>

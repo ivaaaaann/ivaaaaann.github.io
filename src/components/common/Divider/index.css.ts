@@ -1,10 +1,11 @@
-import { style } from '@vanilla-extract/css';
-import { vars } from '../../../styles/vars.css';
+import { createVar, style } from '@vanilla-extract/css';
+
+export const dividerColor = createVar();
 
 export const dividerContainer = style({
   borderWidth: 0,
   borderTopWidth: 1,
   margin: 0,
   borderStyle: 'solid',
-  color: vars.color.border,
+  color: dividerColor,
 });

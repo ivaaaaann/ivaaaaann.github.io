@@ -1,0 +1,25 @@
+---
+import Flex from '../../../common/Flex';
+import ResumeSection from '../../common/ResumeSection';
+import ResumeAboutMeItem from '../../common/ResumeAboutMeItem';
+import {resumeAboutMeSectionBoldTextStyle} from './index.css';
+---
+
+<ResumeSection title="About Me" hideDivider>
+  <Flex direction="column" gap={12}>
+    <ResumeAboutMeItem>
+      2년차 소프트웨어 엔지니어로서 프론트엔드 개발을 하고 있습니다.
+    </ResumeAboutMeItem>
+    <ResumeAboutMeItem>
+      주어진 요구사항이나 문제에서 핵심을 빠르게 파악하고 해결하는 데 집중합니다.
+    </ResumeAboutMeItem>
+    <ResumeAboutMeItem>
+      머릿속에서 떠오르는 고민들에 대해 고찰하는 것을 좋아하며, 글로 남기는 것을 취미로 하고
+      있습니다.
+    </ResumeAboutMeItem>
+    <ResumeAboutMeItem>
+      현재 <strong class={resumeAboutMeSectionBoldTextStyle}>산업기능요원</strong> 복무 중입니다.
+      (2024.03.06 ~ 2027.01.05, 기초군사훈련 수료)
+    </ResumeAboutMeItem>
+  </Flex>
+</ResumeSection>

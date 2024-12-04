@@ -1,0 +1,114 @@
+---
+import Flex from '../../../common/Flex';
+import ResumeSection from '../../common/ResumeSection';
+import {ResumeWorkExperienceItem} from '../../common/ResumeWorkExperienceItem';
+import {resumeWorkExperienceContainerStyle} from './index.css';
+---
+
+<ResumeSection title="Work Experience">
+  <Flex direction="column" gap={64} className={resumeWorkExperienceContainerStyle}>
+    <ResumeWorkExperienceItem>
+      <ResumeWorkExperienceItem.Section
+        title="QuotaLab"
+        description="비상장 금융 인프라 플랫폼"
+        position="Frontend Engineer"
+        workingDay={[new Date(2023, 6, 24), null]}
+        link="https://quotabook.com/ko"
+        linkName="quotabook.com"
+      />
+      <ResumeWorkExperienceItem.Content>
+        <ResumeWorkExperienceItem.Description>
+          쿼타랩은 벤처 · 스타트업 기업, 투자자, 출자자를 연결하여 자본의 흐름을 투명하고 효율적으로
+          관리할 수 있는 비즈니스를 만들어 나가고 있습니다.
+        </ResumeWorkExperienceItem.Description>
+        <ResumeWorkExperienceItem.Divider />
+        <ResumeWorkExperienceItem.Group>
+          <ResumeWorkExperienceItem.Group.Overview
+            title="Frontend Chapter"
+            descriptions={[
+              '프론트엔드 챕터의 일원으로서 조직 문화에 기여하고, 기술 부채 해소를 위한 다양한 활동에 적극 참여했습니다.',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.KeyPoints
+            keyPoints={[
+              '쿼타랩 디자인 시스템 Qube 신규 컴포넌트 개발 및 테스트 커버리지 개선 8% → 50% 달성',
+              '쿼타북 프로덕트 내 공통 모듈/컴포넌트 스토리 작성 및 테스트 코드 작성',
+              'Linear API를 활용해 이슈 증감 추이를 일간, 주간, 월간으로 시각화하는 대시보드 구축 및 유지보수',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.TechStack
+            techStack={['Typescript', 'React', 'Vanilla Extract', 'Vitest', 'Storybook']}
+          />
+        </ResumeWorkExperienceItem.Group>
+        <ResumeWorkExperienceItem.Divider />
+        <ResumeWorkExperienceItem.Group>
+          <ResumeWorkExperienceItem.Group.Overview
+            title="영업보고 프로젝트"
+            descriptions={[
+              '투자사와 포트폴리오사 간의 영업보고 작성, 취합, 검수, LP사 데이터 전송까지 전 과정을 직접 관리할 수 있는 ERP 성격의 제품을 개발, 운영했습니다.',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.KeyPoints
+            keyPoints={[
+              '영업보고 제품 전반 클라이언트 유지보수',
+              '반기, 분기 VOC 대응 스프린트를 통해 2023년 대비 VOC 발생율 85% 감소',
+              '신규 대기업 고객사 계약 체결에 기여',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.TechStack
+            techStack={[
+              'Typescript',
+              'React',
+              'Next.js',
+              'Tanstack-Query',
+              'Emotion',
+              'Yarn Berry',
+              'Ag-Grid',
+            ]}
+          />
+        </ResumeWorkExperienceItem.Group>
+        <ResumeWorkExperienceItem.Divider />
+        <ResumeWorkExperienceItem.Group>
+          <ResumeWorkExperienceItem.Group.Overview
+            title="SMB Squad"
+            descriptions={[
+              '투자사와 포트폴리오사 간의 주주총회 개최, 소집 통지, 안건 투표까지의 전 과정을 다이렉트로 진행할 수 있는 제품을 개발했습니다.',
+              '또한, 스타트업과 이해관계자 사이에서 발생하는 커뮤니케이션 비용을 절감하기 위해 공지 열람 및 실시간 대화가 가능한 소통 채널을 구축하였습니다.',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.KeyPoints
+            keyPoints={[
+              '주주총회 의결자, 비회원 의결자 페이지 UI 신규 개발',
+              '스타트업, 이해관계자 공지 작성/조회 페이지 UI 신규 개발',
+              '기존 타입 추론이 불가능했던 Antd Form 에서 모두 React Hook Form으로 마이그레이션',
+              '기존 Antd Table 에서 모두 Ag Grid Table로 마이그레이션',
+            ]}
+          />
+          <ResumeWorkExperienceItem.Group.TechStack
+            techStack={[
+              'Typescript',
+              'React',
+              'Next.js',
+              'Tanstack-Query',
+              'Emotion',
+              'Yarn Berry',
+              'React-Hook-Form',
+              'Ag-Grid',
+            ]}
+          />
+        </ResumeWorkExperienceItem.Group>
+        <ResumeWorkExperienceItem.Divider />
+        <ResumeWorkExperienceItem.Group>
+          <ResumeWorkExperienceItem.Group.Overview title="Etc" />
+          <ResumeWorkExperienceItem.Group.KeyPoints
+            hideTitle
+            keyPoints={[
+              '보안 라이센스 ISO 27001 취득을 위한 비밀번호 변경 프로세스 개발',
+              '구독 플랜 별 기능 제공을 위해 쿼타북 프로덕트 전반 피쳐플래깅 적용',
+            ]}
+          />
+        </ResumeWorkExperienceItem.Group>
+      </ResumeWorkExperienceItem.Content>
+    </ResumeWorkExperienceItem>
+  </Flex>
+</ResumeSection>
