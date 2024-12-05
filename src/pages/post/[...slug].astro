@@ -1,12 +1,12 @@
 ---
 import {type CollectionEntry, getCollection} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import {GET} from '../api/views';
-import TableOfContents from '../../components/common/TableOfContents';
-import {convert} from '../../utils/functions/convert';
-import {sectionContainerStyle, contentContainerStyle} from './index.css';
+import TableOfContents from '../../components/common/TableOfContents/index.tsx';
 import PostSummary from '../../components/post/PostSummary/index.astro';
-import PostContentWrapper from './PostContentWrapper.astro';
+import {convert} from '../../utils/functions/convert';
+import {GET} from '../api/views';
+import {sectionContainerStyle, contentContainerStyle} from './index.css';
+import '../../styles/markdown.css';
 
 export const getStaticPaths = async () => {
   const posts = await getCollection('blog');
@@ -34,19 +34,17 @@ const viewCountData = await viewCountResponse.json();
 ---
 
 <Layout pageTitle={post.data.title}>
-  <PostContentWrapper>
-    <section class={sectionContainerStyle}>
-      <article id="markdown-container" class={contentContainerStyle}>
-        <PostSummary post={post} viewCount={viewCountData.data.count ?? 0} />
-        <Content />
-      </article>
-      {
-        convert(Content, (Content) => (
-          <TableOfContents>
-            <Content />
-          </TableOfContents>
-        ))
-      }
-    </section>
-  </PostContentWrapper>
+  <section class={sectionContainerStyle}>
+    <article id="markdown-container" class={contentContainerStyle}>
+      <PostSummary post={post} viewCount={viewCountData.data.count ?? 0} />
+      <Content />
+    </article>
+    {
+      convert(Content, (Content) => (
+        <TableOfContents>
+          <Content />
+        </TableOfContents>
+      ))
+    }
+  </section>
 </Layout>
