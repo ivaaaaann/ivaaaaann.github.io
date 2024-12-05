@@ -10,7 +10,14 @@ import db from '@astrojs/db';
 export default defineConfig({
   site: 'https://ivaaaaann.github.io',
   base: '/',
-  integrations: [react(), mdx(), sitemap(), db()],
+  integrations: [
+    react(),
+    mdx(),
+    sitemap({
+      filter: (page) => page.includes('https://ivaaaaann.github.io/post'),
+    }),
+    db(),
+  ],
   vite: {
     plugins: [vanillaExtractPlugin()],
   },
