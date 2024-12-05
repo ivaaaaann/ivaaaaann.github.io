@@ -1,5 +1,3 @@
-import QuotaLabLogo from '../../public/assets/careerLogos/quotalabLogo.svg';
-
 export const SITE_HOST = 'ivaaaaann.github.io';
 export const SITE_URL = `https://${SITE_HOST}`;
 export const SITE_TITLE = "Ivan's Youth";
