@@ -8,7 +8,6 @@ globalStyle(
     padding: 0,
     border: 0,
     fontSize: '100%',
-    fontFamily: `${fonts.base}, -apple-system, sans-serif`,
     verticalAlign: 'baseline',
   },
 );

@@ -35,10 +35,10 @@ export const postItemContentStyle = style([
 
 export const postItemTitleStyle = style([
   sprinkles({
-    fontFamily: 'heading',
     margin: 0,
   }),
   {
+    fontFamily: vars.fontFamily.heading,
     fontSize: vars.fontSize.headingMedium,
   },
 ]);
@@ -46,12 +46,12 @@ export const postItemTitleStyle = style([
 export const postItemDescriptionStyle = style([
   sprinkles({
     width: 'full',
-    fontFamily: 'base',
     margin: 0,
     marginY: 16,
     overflow: 'hidden',
   }),
   {
+    fontFamily: vars.fontFamily.base,
     fontSize: vars.fontSize.contentMedium,
     lineHeight: vars.lineHeight.xxlarge,
     display: '-webkit-flex',
@@ -65,10 +65,10 @@ export const postItemDescriptionStyle = style([
 
 export const postItemTagStyle = style([
   sprinkles({
-    fontFamily: 'base',
     padding: 6,
   }),
   {
+    fontFamily: vars.fontFamily.base,
     fontSize: 'small',
     borderRadius: vars.radius[6],
     backgroundColor: vars.color.gray300,

@@ -1,13 +1,12 @@
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
 import { createVariantsWithSprinkles } from '../../../utils/style/createVariantsWithSprinkles';
 import { style } from '@vanilla-extract/css';
-import { sprinkles } from '../../../styles/sprinkles.css';
 import { vars } from '../../../styles/vars.css';
 import { primitiveProperties } from '../../../styles/primitive.css';
 import { getObjectKeys } from '../../../utils/functions/getObjectKeys';
 
 export const txtContainer = recipe({
-  base: sprinkles({ fontFamily: 'base' }),
+  base: style({ fontFamily: vars.fontFamily.base }),
   variants: {
     size: getObjectKeys(primitiveProperties.fontSize).reduce(
       (acc, cur) => ({

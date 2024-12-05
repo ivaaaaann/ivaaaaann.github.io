@@ -34,24 +34,21 @@ export const wrapStyle = style([
 
 export const titleWrapStyle = style([
   sprinkles({
-    fontFamily: 'base',
     textDecoration: 'none',
   }),
-  { color: vars.color.base, fontSize: vars.fontSize.headingMedium },
-]);
-
-export const titleStyle = sprinkles({
-  fontFamily: 'base',
-});
-
-export const boldTitleStyle = style([
-  sprinkles({
-    fontFamily: 'heading',
-  }),
   {
-    color: vars.color.primary,
+    color: vars.color.base,
+    fontSize: vars.fontSize.headingMedium,
+    fontFamily: vars.fontFamily.base,
   },
 ]);
+
+export const titleStyle = style({ fontFamily: vars.fontFamily.base });
+
+export const boldTitleStyle = style({
+  fontFamily: vars.fontFamily.heading,
+  color: vars.color.primary,
+});
 
 export const anchorWrapStyle = sprinkles({
   display: 'flex',
@@ -61,10 +58,10 @@ export const anchorWrapStyle = sprinkles({
 
 export const anchorStyle = style([
   sprinkles({
-    fontFamily: 'heading',
     textDecoration: 'none',
   }),
   {
+    fontFamily: vars.fontFamily.heading,
     fontSize: vars.fontSize.headingSmall,
     color: vars.color.base,
     ':hover': {
@@ -76,10 +73,10 @@ export const anchorStyle = style([
 
 export const resumeAnchorStyle = style([
   sprinkles({
-    fontFamily: 'heading',
     textDecoration: 'none',
   }),
   {
+    fontFamily: vars.fontFamily.heading,
     fontSize: vars.fontSize.headingSmall,
     color: vars.color.secondary,
     ':hover': {
