@@ -10,7 +10,7 @@ createGlobalTheme(':root', vars, {
   },
   fontFamily: {
     heading: fonts.heading,
-    base: fonts.heading,
+    base: fonts.base,
     light: fonts.light,
   },
   fontSize: {

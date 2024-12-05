@@ -12,11 +12,11 @@ export const homeHeroStyle = style({
 
 export const heroTitleStyle = style([
   sprinkles({
-    fontFamily: 'base',
     position: 'absolute',
     marginY: 0,
   }),
   {
+    fontWeight: vars.fontFamily.base,
     color: vars.color.white,
     bottom: 20,
     left: 20,
