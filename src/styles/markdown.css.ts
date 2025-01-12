@@ -2,27 +2,31 @@ import { globalStyle } from '@vanilla-extract/css';
 import { vars } from './vars.css';
 
 globalStyle('#markdown-container > h1, h2, h3, h4, blockquote, aside', {
-  margin: '20px 0 20px 0',
+  margin: '6px 0',
 });
 
 globalStyle('#markdown-container > h1', {
   fontSize: vars.fontSize.headingMedium,
   fontWeight: vars.fontWeight.heading,
+  margin: '24px 0 8px 0',
 });
 
 globalStyle('#markdown-container > h2', {
   fontSize: vars.fontSize.headingSmall,
   fontWeight: vars.fontWeight.heading,
+  margin: '24px 0 8px 0',
 });
 
 globalStyle('#markdown-container > h3', {
   fontSize: vars.fontSize.contentLarge,
   fontWeight: vars.fontWeight.heading,
+  margin: '24px 0 8px 0',
 });
 
 globalStyle('#markdown-container > h4', {
   fontSize: vars.fontSize.contentMedium,
   fontWeight: vars.fontWeight.heading,
+  margin: '24px 0 8px 0',
 });
 
 globalStyle('#markdown-container > p', {
